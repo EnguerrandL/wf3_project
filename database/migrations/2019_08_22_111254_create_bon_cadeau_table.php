@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBonCadeauTable extends Migration
+class CreateGiftCardTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,15 @@ class CreateBonCadeauTable extends Migration
      */
     public function up()
     {
-        Schema::create('bon_cadeau', function (Blueprint $table) {
+        Schema::create('gift_card', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('status', ['valide', 'utiliser', 'annuler', 'rembourser']);
-            $table->string('lien_facture');
-            $table->string('lien_bon_achat');
-            $table->date('date_achat');
-            $table->boolean('affichage_prix')->default(0);
-            $table->integer('montant_depart');
-            $table->integer('montant_fin');
+            $table->enum('status', ['validate', 'used', 'canceled', 'refund']);
+            $table->string('link_bill');
+            $table->string('link_gift');
+            $table->date('date_buy');
+            $table->boolean('showing_price')->default(0);
+            $table->integer('begin_price');
+            $table->integer('end_price')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +33,6 @@ class CreateBonCadeauTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bon_cadeau');
+        Schema::dropIfExists('gift_card');
     }
 }
