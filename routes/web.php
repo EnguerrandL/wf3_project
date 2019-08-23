@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dynamic_pdf', 'DynamicPDFController@index')->name('dynamic_pdf');
+Route::get('/dynamic_pdf/pdf', 'DynamicPDFController@pdf')->name('dynamic_pdf');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/stripe', 'HomeController@stripe')->name('stripe');
+
+
