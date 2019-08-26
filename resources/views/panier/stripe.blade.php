@@ -1,0 +1,1 @@
+{{-- Page payement STRIPE --}}

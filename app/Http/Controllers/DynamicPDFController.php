@@ -16,7 +16,7 @@ class DynamicPDFController extends Controller
 
     public function __construct() {
         $this->repository = new PdfRepositories();
-        parent::__construct();
+        // parent::__construct();
     }
 
     public function index()
