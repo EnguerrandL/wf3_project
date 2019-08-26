@@ -1,3 +1,4 @@
+{{-- Page principale administration --}}
 @extends('layouts.app')
 
 @section('content')

@@ -1,3 +1,4 @@
+{{-- Page edition client --}}
 @extends('layouts.app')
 
 @section('content')

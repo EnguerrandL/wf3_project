@@ -16,6 +16,8 @@ class CreateBonCadeauxTable extends Migration
         Schema::create('bon_cadeaux', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->integer('somme_initiale');
+            $table->integer('somme_restante');
             $table->integer('affichage_prix');
             $table->enum('status', ['valide', 'utiliser', 'annuler', 'rembourser']);
             $table->enum('type_cadeau', ['bon_cadeau', 'cheque_cadeau']);
