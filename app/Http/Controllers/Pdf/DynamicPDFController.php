@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Pdf;
 
+use App\Http\Controllers\Controller;
 use App\Http\Repositories\PdfRepositories;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -29,6 +30,7 @@ class DynamicPDFController extends Controller
     {
         $customer_data['customer_data'] = $this->repository->get_customer_data();
         $pdf = PDF::loadView('pdf.invoice', $customer_data);
+        // $pdf->set_base_path("/www/public/css/"); permet d'aller chercher le fichiers
         return $pdf->stream();
     }
 }

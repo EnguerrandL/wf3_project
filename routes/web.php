@@ -12,13 +12,42 @@
 */
 
 
-// Route Page principal
 
 
 
-Route::get('/', function () {
-    return view('home');
+Auth::routes();
+
+
+// ROUTES TEST
+Route::get('/stripe', 'HomeController@stripe')->name('stripe');
+
+
+
+// Routes Page principal
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
+Route::get('/chequecadeau', 'HomeController@chequecadeau')->name('chequecadeau');
+Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/dev', 'HomeController@dev')->name('dev');
+Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentionslegales');
+
+
+
+// Ici les routes pour les différentes catégorie
+
+Route::prefix('categorie')->namespace('Categorie')->group(function() {
+
+    Route::get('/cellum6', 'CategorieController@cellum6')->name('categorie.cellum6');
+    Route::get('/epilation', 'CategorieController@epilation')->name('categorie.epilation');
+    Route::get('/hammam', 'CategorieController@hammam')->name('categorie.hammam');
+    Route::get('/mainpied', 'CategorieController@mainpied')->name('categorie.mainpied');
+    Route::get('/massage', 'CategorieController@massage')->name('categorie.massage');
+    Route::get('/soins', 'CategorieController@soins')->name('categorie.soins');
+    Route::get('/uv', 'CategorieController@uv')->name('categorie.uv');
+
+
 });
+
 
 
 
@@ -37,6 +66,9 @@ Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function()
 });
 
 
+
+
+
 // Ici les routes pour le tunnel d'achat
 
 Route::prefix('panier')->namespace('Panier')->group(function() {
@@ -47,20 +79,26 @@ Route::prefix('panier')->namespace('Panier')->group(function() {
     Route::get('/commande', 'PanierController@commande')->name('panier.commande');
 
 //  Panier panier = Visuel du panier
-// Formulaire client avec ses infos avant de proceder aux paiement.
+// Panier clientsinfos = Formulaire client avec ses infos avant de proceder aux paiement.
 // Panier stripe = visuel bloque STRIPE (achat de la commande)
 // Panier commande = visuel de la commande du client (recapitulatif) avec accès facture + pdf
 
 });
 
-// Autre routes // tests
 
-Route::get('/dynamic_pdf', 'DynamicPDFController@index')->name('dynamic_pdf');
-Route::get('/dynamic_pdf/pdf', 'DynamicPDFController@pdf')->name('dynamic_pdf');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/stripe', 'HomeController@stripe')->name('stripe');
+// Ici les routes pour le générateur de PDF
+
+Route::get('/dynamic_pdf', 'Pdf\DynamicPDFController@index')->name('dynamic_pdf');
+Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf');
+
+
+
+
+
+
+
+
 
 
