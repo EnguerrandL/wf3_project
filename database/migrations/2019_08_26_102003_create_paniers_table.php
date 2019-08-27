@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreatePaniersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    // Schema de la table utilisateur de notre base de données
     public function up()
     {
         Schema::create('paniers', function (Blueprint $table) {

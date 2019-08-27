@@ -6,17 +6,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateServicesCommanderTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    // Schema de la table services_commander de notre base de données
     public function up()
     {
         Schema::create('services_commander', function (Blueprint $table) {
             $table->bigIncrements('id');
         });
 
+        // ajout des clées étrangères panier et service
         Schema::table('services_commander', function (Blueprint $table) {
             $table->unsignedBigInteger('panier_id');
             $table->foreign('panier_id')->references('id')->on('paniers');

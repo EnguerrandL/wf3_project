@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    // Schema de la table utilisateur de notre base de données
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {

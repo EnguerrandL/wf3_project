@@ -22,15 +22,17 @@ class DynamicPDFController extends Controller
 
     public function index()
     {
+
         $customer_data = $this->repository->get_customer_data();
-        return view('dynamic_pdf')->with('customer_data', $customer_data);
+        return view('pdf.dynamic_pdf')->with('customer_data', $customer_data);
     }
 
     public function pdf()
     {
+
         $customer_data['customer_data'] = $this->repository->get_customer_data();
         $pdf = PDF::loadView('pdf.invoice', $customer_data);
-        // $pdf->set_base_path("/www/public/css/"); permet d'aller chercher le fichiers
-        return $pdf->stream();
+         $pdf->save('../storage/app/factures/facture.pdf');
+         return $pdf->stream();
     }
 }

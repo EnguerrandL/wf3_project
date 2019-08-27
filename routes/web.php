@@ -13,8 +13,6 @@
 
 
 
-
-
 Auth::routes();
 
 
@@ -44,12 +42,7 @@ Route::prefix('categorie')->namespace('Categorie')->group(function() {
     Route::get('/massage', 'CategorieController@massage')->name('categorie.massage');
     Route::get('/soins', 'CategorieController@soins')->name('categorie.soins');
     Route::get('/uv', 'CategorieController@uv')->name('categorie.uv');
-
-
 });
-
-
-
 
 
 
@@ -59,13 +52,9 @@ Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function()
 
     Route::get('/', 'AdminController@index')->name('admin.index');
     Route::get('/edit', 'AdminController@edit')->name('admin.edit');
-
     //  Admin index = Tableau de bord administration...
     //  Admin edit = Edition et mise à jour d'une commande
-
 });
-
-
 
 
 
@@ -82,16 +71,13 @@ Route::prefix('panier')->namespace('Panier')->group(function() {
 // Panier clientsinfos = Formulaire client avec ses infos avant de proceder aux paiement.
 // Panier stripe = visuel bloque STRIPE (achat de la commande)
 // Panier commande = visuel de la commande du client (recapitulatif) avec accès facture + pdf
-
 });
-
-
 
 
 // Ici les routes pour le générateur de PDF
 
 Route::get('/dynamic_pdf', 'Pdf\DynamicPDFController@index')->name('dynamic_pdf');
-Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf');
+Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf/pdf');
 
 
 

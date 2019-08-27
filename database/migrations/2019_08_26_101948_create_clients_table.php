@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateClientsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    // Schema de la table client de notre base de données
     public function up()
     {
         Schema::create('clients', function (Blueprint $table) {
@@ -24,7 +20,7 @@ class CreateClientsTable extends Migration
             $table->integer('telephone')->nullable();
         });
 
-
+        // ajout de la clée étrangère panier
         Schema::table('clients', function (Blueprint $table) {
 
             $table->unsignedBigInteger('panier_id');

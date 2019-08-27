@@ -4,19 +4,13 @@ use Illuminate\Database\Seeder;
 
 class UsersTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
+    // création de d'un utilisateur admin qui sera enregistré dans la base de donnée
     public function run()
     {
         DB::table('users')->insert([
-            'name' => 'Enguerrand',
-            'email' => 'enguerrandtestt@gmail.com',
-            'password' => bcrypt('enguerrandtest'),
+            'name' => 'admin',
+            'email' => 'admin@admin',
+            'password' => bcrypt('admin'),
         ]);
-        // Laurent ALLEGRE
-
     }
 }

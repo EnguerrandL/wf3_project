@@ -6,11 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateServicesTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+    // Schema de la table utilisateur de notre base de données
     public function up()
     {
         Schema::create('services', function (Blueprint $table) {
@@ -21,6 +17,7 @@ class CreateServicesTable extends Migration
             $table->string('url_image')->nullable();
         });
 
+        // ajout de la clée étrangère catégories
         Schema::table('services', function (Blueprint $table) {
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories');
