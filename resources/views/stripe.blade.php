@@ -141,4 +141,6 @@ function stripeTokenHandler(token) {
   form.submit();
 }
 </script>
+
+
 @endsection
