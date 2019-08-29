@@ -5,7 +5,8 @@
 
     <div id="containerForm">
         <h2>Formulaire d'information client</h2>
-        <form class="form" action="#" method="post">
+        <form class="form" action="{{ route('panier.stripe') }}" method="post">
+            @csrf
           <label for="nom">*Nom</label>
           <input type="text" id="nom" name="nom" value="" placeholder="">
 

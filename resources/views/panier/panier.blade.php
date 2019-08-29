@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-header">PAGE PANIER</div>
 
-                ICI PAGE PANIER AVEC LA  SELECTION DU CLIENT
+                <a href="{{ route('panier.clientsinfos') }}"><button class="btn btn-success " type="submit">Valider et payer ma commande</button></a>
                 </div>
             </div>
         </div>

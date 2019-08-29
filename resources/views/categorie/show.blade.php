@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-              <h1>PAGE CATEGORIE MASSAGE</h1>
+              <h1>{{$categorie->nom}}</h1>
 
 
               <table class="col-8 mx-auto table table-hover table-bordered">
@@ -22,13 +22,12 @@
                     </thead>
                     @foreach($products as $product)
                     <tr>
-                            <td>{{$product->categorie_id}}</td>
-                            <td>{{$product->nom}}</td>
-                            <td>{{$product->description}}</td>
-                            <td>{{$product->prix}}</td>
-
-                            <td><button class="btn btn-success">Offrir ce service</button></td>
-             </tr>
+                        <td>{{$product->categorie_id}}</td>
+                        <td>{{$product->nom}}</td>
+                        <td>{{$product->description}}</td>
+                        <td>{{$product->prix}}</td>
+                        <td><button class="btn btn-success">Offrir ce service</button></td>
+                    </tr>
                  @endforeach
             </table>
 

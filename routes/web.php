@@ -12,6 +12,14 @@
 */
 
 
+// categories/index => Cateogires (epilations, massages, etc.)
+// categories/show => Epilation (demi jabmes, etc.)
+// categories/create => formulaire d'ajout d'une catégorie
+// categorie/edit-update-store-destroy ... (Route::ressource)
+
+// products/index => Liste de tous les products
+// proucts/show => détail d'un produit (prix, description complete, etc.)
+
 
 Auth::routes();
 
@@ -32,6 +40,12 @@ Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentions
 
 
 // Ici les routes pour les différentes catégorie
+
+// name - épilation & slug - epilation
+// slug - Category
+// Exemple url /category/epilation
+Route::get('/categorie/{slug}', 'CategorieController@show')->name('categorie.show');
+
 
 Route::prefix('categorie')->namespace('Categorie')->group(function() {
 
@@ -64,7 +78,12 @@ Route::prefix('panier')->namespace('Panier')->group(function() {
 
     Route::get('/panier', 'PanierController@panier')->name('panier.panier');
     Route::get('/clientinfos', 'PanierController@clientinfos')->name('panier.clientsinfos');
-    Route::get('/stripe', 'PanierController@stripe')->name('panier.stripe');
+
+
+
+
+    Route::post('/stripe', 'PanierController@stripe')->name('panier.stripe');
+
     Route::get('/commande', 'PanierController@commande')->name('panier.commande');
 
 //  Panier panier = Visuel du panier

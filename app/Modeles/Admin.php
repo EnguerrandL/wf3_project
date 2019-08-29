@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Modeles;
 
 use Illuminate\Database\Eloquent\Model;
 
-class GiftCard extends Model
+class Admin extends Model
 {
     //
 }
