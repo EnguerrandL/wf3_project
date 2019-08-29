@@ -4,7 +4,7 @@ namespace App\Modeles;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Categorie extends Model
 {
     public function services()
     {

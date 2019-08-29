@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    public function category()
-    {
-        return $this->belongsTo('App\Modeles\Category');
+    protected $table = 'services';
+    public function categorie() {
+        return $this->belongsTo('App\Modeles\Categorie');
         // return $this->hasMany(Product::class);
     }
 }

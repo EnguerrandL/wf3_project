@@ -28,7 +28,7 @@
                         <td>{{$customer['message']}}</td>
 
 
-                        <td> <a href="{{ url('dynamic_pdf/pdf') }}"> <button type="button" class="btn btn-warning">Ouvrir ma facture en pdf</button></a></td>
+                        <td> <a href="{{ url('dynamic_pdf/pdf') }}"> <button type="button" class="btn btn-warning">Télécharger ma facture en pdf</button></a></td>
 
                         </tr>
                     @endforeach

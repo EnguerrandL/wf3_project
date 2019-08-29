@@ -15,6 +15,7 @@ class CategoriesTableSeeder extends Seeder
             DB::table('categories')->insert([
                 'nom' => $categorie['nom'],
                 'description' => $categorie['description'],
+                'slug' => $categorie['slug'],
             ]);
         }
     }

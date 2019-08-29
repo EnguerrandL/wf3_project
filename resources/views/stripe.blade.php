@@ -141,19 +141,4 @@ function stripeTokenHandler(token) {
   form.submit();
 }
 </script>
-
-
-<form action="la page qui procede au paiement.php" method="POST">
-    <script
-      src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-      data-key="pk_test_ctkqNVOYRVuUd5wS2MfCjnAm00tdQjuWVS"
-      data-amount="500"
-      data-name="Erasmus of Paris"
-      data-description="Discover France Guide"
-      data-image="https://www.erasmusofparis.com/up/erasmus-of-paris.jpg"
-      data-locale="auto"
-      data-currency="eur"
-      data-label="Click here to buy the Discover France Guide" >
-    </script>
-  </form>
 @endsection

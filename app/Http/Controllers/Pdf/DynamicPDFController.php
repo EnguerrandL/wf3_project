@@ -32,7 +32,7 @@ class DynamicPDFController extends Controller
 
         $customer_data['customer_data'] = $this->repository->get_customer_data();
         $pdf = PDF::loadView('pdf.invoice', $customer_data);
-        //  save('../storage/app/factures/facture.pdf');
-            return $pdf->save('../storage/app/factures/facture.pdf')->stream();
+         $pdf->save('../storage/app/factures/facture.pdf');
+         return $pdf->stream();
     }
 }

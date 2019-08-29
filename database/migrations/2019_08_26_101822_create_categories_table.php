@@ -9,10 +9,11 @@ class CreateCategoriesTable extends Migration
     // Schema de la table categories de notre base de données
     public function up()
     {
-            Schema::create('categories', function (Blueprint $table) {
-                $table->bigIncrements('id');
-                $table->string('nom');
-                $table->text('description');
+        Schema::create('categories', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('nom');
+            $table->text('description');
+            $table->string('slug');
         });
     }
 

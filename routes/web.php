@@ -11,7 +11,6 @@
 |
 */
 
-
 // categories/index => Cateogires (epilations, massages, etc.)
 // categories/show => Epilation (demi jabmes, etc.)
 // categories/create => formulaire d'ajout d'une catégorie
@@ -19,7 +18,9 @@
 
 // products/index => Liste de tous les products
 // proucts/show => détail d'un produit (prix, description complete, etc.)
+// proucts/edit => changer le prix d'un produit
 
+// Route::resource('products/, ProductCOntroller);
 
 Auth::routes();
 
@@ -40,25 +41,23 @@ Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentions
 
 
 // Ici les routes pour les différentes catégorie
+// nom épilation et slug = epilation
+// Exemple URL /categorie/epilation
 
-// name - épilation & slug - epilation
-// slug - Category
-// Exemple url /category/epilation
 Route::get('/categorie/{slug}', 'CategorieController@show')->name('categorie.show');
+Route::get('/categories', 'CategorieController@index')->name('categories');
 
 
-Route::prefix('categorie')->namespace('Categorie')->group(function() {
+// Route::prefix('categorie')->namespace('Categorie')->group(function() {
 
-    Route::get('/cellum6', 'CategorieController@cellum6')->name('categorie.cellum6');
-    Route::get('/epilation', 'CategorieController@epilation')->name('categorie.epilation');
-    Route::get('/hammam', 'CategorieController@hammam')->name('categorie.hammam');
-    Route::get('/mainpied', 'CategorieController@mainpied')->name('categorie.mainpied');
-    Route::get('/massage', 'CategorieController@massage')->name('categorie.massage');
-    Route::get('/soins', 'CategorieController@soins')->name('categorie.soins');
-    Route::get('/uv', 'CategorieController@uv')->name('categorie.uv');
-});
-
-
+//     Route::get('/cellum6', 'CategorieController@cellum6')->name('categorie.cellum6');
+//     Route::get('/epilation', 'CategorieController@epilation')->name('categorie.epilation');
+//     Route::get('/hammam', 'CategorieController@hammam')->name('categorie.hammam');
+//     Route::get('/mainpied', 'CategorieController@mainpied')->name('categorie.mainpied');
+//     Route::get('/massage', 'CategorieController@massage')->name('categorie.massage');
+//     Route::get('/soins', 'CategorieController@soins')->name('categorie.soins');
+//     Route::get('/uv', 'CategorieController@uv')->name('categorie.uv');
+// });
 
 // Ici la personne doit être connecter pour accèder aux pages
 
@@ -78,12 +77,7 @@ Route::prefix('panier')->namespace('Panier')->group(function() {
 
     Route::get('/panier', 'PanierController@panier')->name('panier.panier');
     Route::get('/clientinfos', 'PanierController@clientinfos')->name('panier.clientsinfos');
-
-
-
-
-    Route::post('/stripe', 'PanierController@stripe')->name('panier.stripe');
-
+    Route::get('/stripe', 'PanierController@stripe')->name('panier.stripe');
     Route::get('/commande', 'PanierController@commande')->name('panier.commande');
 
 //  Panier panier = Visuel du panier
