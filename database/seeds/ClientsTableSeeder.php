@@ -7,7 +7,7 @@ class ClientsTableSeeder extends Seeder
     public function run()
     {
     
-        // on crée un tableau dans config/services_zen_et_beaute.php
+        // on crée un tableau dans config/fakeclient
         // puis on crée une boucle pour récupérer toutes les données qui
         // nous serviront a remplir la base de donnée
 

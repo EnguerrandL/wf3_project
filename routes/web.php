@@ -64,7 +64,9 @@ Route::get('/categories', 'CategorieController@index')->name('categories');
 Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function() {
 
     Route::get('/', 'AdminController@index')->name('admin.index');
-    Route::get('/edit', 'AdminController@edit')->name('admin.edit');
+    // Route::get('/edit', 'AdminController@edit')->name('admin.edit');
+    Route::get('{admin}/edit', 'AdminController@edit')->name('admin.edit');
+    Route::patch('{admin}', 'AdminController@update');
     //  Admin index = Tableau de bord administration...
     //  Admin edit = Edition et mise à jour d'une commande
 });
@@ -91,6 +93,9 @@ Route::prefix('panier')->namespace('Panier')->group(function() {
 
 Route::get('/dynamic_pdf', 'Pdf\DynamicPDFController@index')->name('dynamic_pdf');
 Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf/pdf');
+
+
+Route::resource('admin', 'Admin\AdminController');
 
 
 
