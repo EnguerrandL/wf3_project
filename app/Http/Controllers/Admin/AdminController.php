@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ServiceRequest;
+use App\Modeles\Categorie;
 use Illuminate\Http\Request;
-use App\Modeles\Client;
-use App\Modeles\Bon_cadeau;
+use App\Modeles\Service;
 use Illuminate\Support\Facades\Session;
 
 
@@ -14,71 +15,117 @@ use Illuminate\Support\Facades\Session;
 class AdminController extends Controller
 {
     public function index() {
-        $clients = Client::all();
-        $BonC = Bon_cadeau::all();
+        $services = Service::orderBy('created_at', 'DESC')->paginate(10);
+        $pushs = Categorie::with(['push'])->get();
 
 
         return view('admin.index', [
-            'clients' =>$clients,
-            'BonC' =>$BonC,
+            'services' =>$services,
+            'pushs' =>$pushs,
+
+
+        ]);
+    }
+
+    public function show() {
+        $services = Service::orderBy('created_at', 'DESC')->paginate(10);
+
+
+        return view('admin.index', [
+            'services' =>$services,
+
         ]);
     }
 
 
+    public function create()
+    {
+        $service = Service::all();
+        $pushs = Categorie::with(['push'])->get();
+
+
+        return view('admin.create', [
+            'service' =>$service,
+            'pushs' =>$pushs,
+        ]);
+    }
 
     public function edit($id)
     {
-        $Client = Client::find($id);
-        $Bon_cadeau = Bon_cadeau::find($id);
+        $service = Service::find($id);
+        $categories = Categorie::all();
+        $pushs = Categorie::with(['push'])->get();
+
+
 
         return view('admin.edit', [
-            'Client' => $Client,
-            'Bon_cadeau' => $Bon_cadeau
+            'service' => $service,
+            'categories' => $categories,
+            'pushs' => $pushs,
         ]);
     }
 
 
-    public function update(Bon_cadeau $request, $boncadeau)
+
+
+    public function update(ServiceRequest $request, $id)
     {
 
-        $Bon_cadeau = Bon_cadeau::find($id);
-        $data = $request->validated([
-            'affichage_prix' => 'required|integer',
-            'status' => 'required',
-        ]);
 
-        $updated = Bon_cadeau::find($id);
-        $updated->affichage_prix = $request->get('affichage_prix');
-        $updated->status = $request->get('status');
-       
-        // $boncadeau->update($data);
 
-        
-        $updated->save();
+        $data = $request->validated();
+        $service = Service::find($id);
+        $service->categorie_id = $data['categorie_id'];
+        $service->nom = $data['nom'];
+        $service->description = $data['description'];
+        $service->prix = $data['prix'];
+
+        // $service->update($data);
+
+        $service->created_at=now();
+        $service->updated_at=now();
+
+        $service->save();
         // Session::flash('status', 'Client mis à jour');
         // Session::flash('type', 'alert-success');
 
-        return redirect('admin/');
+        return redirect('/admin')->with('message', 'Votre service à bien était envoyer');
     }
 
 
 
 
 
-    public function destroy()
-   
+    public function destroy($id)
+
     {
-
-        $clients = Client::all();
-        $BonC = Bon_cadeau::find();
-
-        $clients->delete();
-        $BonC->delete();
-        return redirect('admin');
+        $service = Service::find($id);
+        $service->delete();
+        return redirect('/admin');
     }
 
 
 
+public function store(ServiceRequest $request)
+{
 
-    
+    $data = $request->validated();
+    $service = new Service;
+
+    $service->nom = $data['nom'];
+    $service->description = $data['description'];
+    $service->prix = $data['prix'];
+    $service->categorie_id = $data['categorie_id'];
+
+    // $boncadeau->update($data);
+$service->created_at=now();
+$service->updated_at=now();
+
+    $service->save();
+    // Session::flash('status', 'Client mis à jour');
+    // Session::flash('type', 'alert-success');
+
+    return redirect('/admin')->with('message', 'Votre service à bien était envoyer');
+}
+
 }

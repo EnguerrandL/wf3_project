@@ -15,6 +15,7 @@ class CreateServicesTable extends Migration
             $table->text('description');
             $table->integer('prix');
             $table->string('url_image')->nullable();
+            $table->timestamps();
         });
 
         // ajout de la clée étrangère catégories

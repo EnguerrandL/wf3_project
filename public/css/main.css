@@ -1,0 +1,338 @@
+body {
+    margin: 0;
+}
+#spinner {
+    position: fixed;
+    z-index: 16;
+    background-color: #262626;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    cursor: wait;
+}
+/* classe pour l'ombre sur le main et le footer */
+.ombrepage {
+    width: 90%;
+    margin: auto;
+    background-color: rgb(255, 255, 255, 0.4);
+    -webkit-box-shadow: 1px 1px 12px #555;
+    box-shadow: 1px 1px 12px #555;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+header nav {
+    font-size: 2rem;
+}
+
+.navbar-nav {
+    white-space: nowrap;
+}
+
+.nav-link {
+    color: #477c90 !important;
+}
+
+.navcategorie a {
+    color: #477c90 !important;
+}
+
+button.navbar-toggler {
+    color: #b35d5d !important;
+    border-color: #b35d5d !important;
+}
+
+.dropdown-menu {
+    background-color: #82ccddf1 !important;
+}
+
+header {
+    margin-bottom: 4rem;
+}
+
+/* image de la façade de l'institut de beauté */
+.logofooter {
+    width: 100%;
+    max-width: 223px;
+    /* height: 145px; */
+}
+
+/* image pour le lien Facebook */
+.logofooter1 img {
+    width: 100%;
+    max-width: 153px;
+    /* height: 56px; */
+}
+/* image du logo Zen et Beauté pour le footer */
+.logofooter2 {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* classes pour des couleurs */
+/* https://flatuicolors.com/palette/fr */
+
+.couleurrose {
+    color: #b35d5d !important;
+}
+.couleurbleu {
+    color: #477c90;
+}
+
+.couleurbleufonce {
+    /* azraq blue */
+    color: #4a69bd;
+}
+
+.couleurverte {
+    /* waterfall  */
+    color: #318188 !important;
+}
+
+/* police */
+@font-face {
+    font-family: "Snippet";
+    src: url("../fonts/Snippet-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Nature";
+    src: url("../fonts/Nature-Beauty-Personal-Use.ttf") format("truetype");
+}
+
+.policenature {
+    font-family: "Nature", Arial, Helvetica, sans-serif;
+}
+
+.policesnippet {
+    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #318188;
+    font-weight: 600;
+}
+
+.policesnippet1 {
+    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: #318188;
+    font-weight: 600;
+}
+
+.policesnippet2 {
+    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #318188;
+    font-weight: 600;
+}
+
+footer h5 {
+    color: #b35d5d !important;
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+footer ul li a {
+    color: #318188 !important;
+    font-family: "Snippet", Arial, Helvetica, sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+.txtshadow2 {
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+/* Style 2 - top/bottom lines come in from left/right */
+a.linkStyle2 {
+    padding: 0.5em 0;
+    position: relative;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+}
+a.linkStyle2:hover,
+a.linkStyle2:focus {
+    color: #ff9999 !important;
+    text-decoration: none !important;
+}
+
+a.linkStyle2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 1px;
+    background: #e58e26;
+    display: block;
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1), -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+}
+a.linkStyle2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background: #d98b48;
+    display: block;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1), -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+}
+a.linkStyle2:hover::before,
+a.linkStyle2:focus::before {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: right top;
+    transform-origin: right top;
+}
+a.linkStyle2:hover::after,
+a.linkStyle2:focus::after {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+}
+
+/* pour le background général */
+#bg-general {
+    background-image: url("../img/background_general.jpg");
+    background-repeat: repeat;
+    padding-bottom: 1rem;
+}
+
+/* STYLE BOUTON */
+.stylebouton {
+    background-image: url("../img/boncadeau.jpg");
+    background-size: cover;
+    color: white;
+    max-width: 105px;
+    min-width: 105px;
+    max-height: 64px;
+    min-height: 64px;
+    margin: auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.stylebouton:hover {
+    border: 1px solid #b35d5d;
+    color: white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* slider publicitaire */
+
+.item_pub img {
+    max-width: 200px;
+    min-width: 160px;
+    width: 25%;
+    margin: 1rem;
+}
+
+/* médias queries */
+
+@media screen and (max-width: 62em) {
+    header nav {
+        font-size: 1.5rem;
+    }
+    .policesnippet {
+        font-size: 1.5rem;
+    }
+    footer .container {
+        padding: 40px 40px !important;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .policetest {
+        font-size: 1rem;
+    }
+    header {
+        margin-bottom: 2rem;
+    }
+    header nav {
+        font-size: 1rem;
+    }
+    footer .container {
+        padding: 40px 40px !important;
+    }
+    .policesnippet {
+        font-size: 1rem;
+    }
+    .policesnippet1 {
+        font-size: 1rem;
+    }
+}

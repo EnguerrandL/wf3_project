@@ -30,10 +30,10 @@ class HomeController extends Controller
         return view('portfolio');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
+    // public function contact()
+    // {
+    //     return view('contact');
+    // }
 
     public function dev()
     {
@@ -44,9 +44,38 @@ class HomeController extends Controller
     {
         return view('mentionslegales');
     }
+    public function epilation()
+    {
+        return view('epilation');
+    }
+    public function hammam()
+    {
+        return view('hammam');
+    }
+    public function lipomodelage()
+    {
+        return view('lipomodelage');
+    }
+    public function massage()
+    {
+        return view('massage');
+    }
+    public function ongles()
+    {
+        return view('ongles');
+    }
+    public function soins()
+    {
+        return view('soins');
+    }
+    public function uv()
+    {
+        return view('uv');
+    }
 
 
-// TESTS CONTROLLERS
+
+    // TESTS CONTROLLERS
 
 
     public function stripe()

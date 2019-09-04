@@ -8,7 +8,7 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header"> Mise à jour client</div>
+                    <div class="card-header"> Mise à jour des services</div>
                     <div class="card-body">
 
                         <!-- Errors -->
@@ -23,37 +23,72 @@
                         @endif
 
                         <!-- Formulaire -->
-                        <form action="/admin" method="POST">
-                            @method('PATCH') <!-- Ajoute <input type=hidden value=PUT -->
+                        <form action="{{ route('admin.update', ['id' => $service->id]) }}" method="POST">
+                            @method('PUT') <!-- Ajoute <input type=hidden value=PUT -->
                             @csrf <!-- Ajoute <input type=hidden value=XXXXX -->
                             <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="title">Montant restant</label>
-                                    <input value="" placeholder=""
-                                            name="affichage_prix" type="text" class="form-control" id="affichage_prix">
-                                </div>
-                            
-                                <div class="col-md-12 mb-3">
-                                    <label for="status">status</label>
-                                    <select class="custom-select"  value="" name="status">
-                                         <option selected  value="valide">Valide</option>
-                                         <option selected  value="utiliser">Utiliser</option>
-                                         <option selected  value="annuler">Annuler</option>
-                                         <option selected  value="rembourser">Rembourser</option>
-                                     
+                                 {{-- <div class="col-md-12 mb-3">
+                                    <label for="title">Catégorie</label>
+                                <input value="@if(old('categorie_id')) {{old('categorie_id')}} @else {{ $service->categorie_id }} @endif" placeholder="@if(old('categorie')) {{old('categorie')}} @else {{ $service->categorie_id }} @endif"
+                                            name="categorie_id" type="text" class="form-control" >
+                                </div> --}}
+
+
+
+
+
+                                <select class="col-md-12 mb-3" name="categorie_id">
+                                    @foreach($pushs as $push)
+                                    <option value="{{($push->id)}}">
+
+
+                                        {{$push->nom}}</option>
+                                    @endforeach
                                     </select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="title">Nom</label>
+                                    <input value="@if(old('nom')) {{old('nom')}} @else {{ $service->nom }} @endif" placeholder="@if(old('nom')) {{old('nom')}} @else {{ $service->nom }} @endif"
+                                            name="nom" type="text" class="form-control">
                                 </div>
-                         
+                                <div class="col-md-12 mb-3">
+                                    <label for="title">Description</label>
+                                    <input value="@if(old('description')) {{old('description')}} @else {{ $service->description }} @endif" placeholder="@if(old('description')) {{old('description')}} @else {{ $service->description }} @endif"
+                                            name="description" type="text" class="form-control" >
+                                </div>
+                                <div class="col-md-12 mb-3">
+                                    <label for="title">Prix</label>
+                                    <input value="@if(old('prix')) {{old('prix')}} @else {{ $service->prix }} @endif" placeholder="@if(old('prix')) {{old('prix')}} @else {{ $service->prix }} @endif"
+                                            name="prix" type="text" class="form-control">
+                                </div>
+
+
+
                                 <div class="col-md-12 mb-3">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <input type="submit" class="btn btn-block btn-primary"
-                                                   value="Mettre à jour le client">
+                                                   value="Mettre à jour le service">
                                         </div>
                                         <div class="col-md-6">
                                             <a class="btn btn-block btn-danger"
                                                href="{{ route('admin.index') }}">
-                                                Retourner à la liste des cliens
+                                                Retourner à la liste des services
                                             </a>
                                         </div>
                                     </div>

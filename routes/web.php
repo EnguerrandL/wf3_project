@@ -25,68 +25,34 @@
 Auth::routes();
 
 
-// ROUTES TEST
-Route::get('/stripe', 'HomeController@stripe')->name('stripe');
+
 
 
 
 // Routes Page principal
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
-Route::get('/chequecadeau', 'HomeController@chequecadeau')->name('chequecadeau');
-Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/chequecadeau', 'CategorieController@chequecadeau')->name('chequecadeau');
 Route::get('/dev', 'HomeController@dev')->name('dev');
 Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentionslegales');
-
 
 
 // Ici les routes pour les différentes catégorie
 // nom épilation et slug = epilation
 // Exemple URL /categorie/epilation
-
-Route::get('/categorie/{slug}', 'CategorieController@show')->name('categorie.show');
-Route::get('/categories', 'CategorieController@index')->name('categories');
-
-
-// Route::prefix('categorie')->namespace('Categorie')->group(function() {
-
-//     Route::get('/cellum6', 'CategorieController@cellum6')->name('categorie.cellum6');
-//     Route::get('/epilation', 'CategorieController@epilation')->name('categorie.epilation');
-//     Route::get('/hammam', 'CategorieController@hammam')->name('categorie.hammam');
-//     Route::get('/mainpied', 'CategorieController@mainpied')->name('categorie.mainpied');
-//     Route::get('/massage', 'CategorieController@massage')->name('categorie.massage');
-//     Route::get('/soins', 'CategorieController@soins')->name('categorie.soins');
-//     Route::get('/uv', 'CategorieController@uv')->name('categorie.uv');
-// });
-
-// Ici la personne doit être connecter pour accèder aux pages
-
-Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function() {
-
-    Route::get('/', 'AdminController@index')->name('admin.index');
-    // Route::get('/edit', 'AdminController@edit')->name('admin.edit');
-    Route::get('{admin}/edit', 'AdminController@edit')->name('admin.edit');
-    Route::patch('{admin}', 'AdminController@update');
-    //  Admin index = Tableau de bord administration...
-    //  Admin edit = Edition et mise à jour d'une commande
-});
+Route::get('/massage', 'CategorieController@massage')->name('massage');
+Route::get('/epilation', 'CategorieController@epilation')->name('epilation');
+Route::get('/hammam', 'CategorieController@hammam')->name('hammam');
+Route::get('/lipomodelage', 'CategorieController@lipomodelage')->name('lipomodelage');
+Route::get('/ongles', 'CategorieController@ongles')->name('ongles');
+Route::get('/soins', 'CategorieController@soins')->name('soins');
+Route::get('/uv', 'CategorieController@uv')->name('uv');
 
 
+// Route pour le formulaire de contact
 
-// Ici les routes pour le tunnel d'achat
-
-Route::prefix('panier')->namespace('Panier')->group(function() {
-
-    Route::get('/panier', 'PanierController@panier')->name('panier.panier');
-    Route::get('/clientinfos', 'PanierController@clientinfos')->name('panier.clientsinfos');
-    Route::get('/stripe', 'PanierController@stripe')->name('panier.stripe');
-    Route::get('/commande', 'PanierController@commande')->name('panier.commande');
-
-//  Panier panier = Visuel du panier
-// Panier clientsinfos = Formulaire client avec ses infos avant de proceder aux paiement.
-// Panier stripe = visuel bloque STRIPE (achat de la commande)
-// Panier commande = visuel de la commande du client (recapitulatif) avec accès facture + pdf
-});
+Route::get('/contact', 'ContactController@create')->name('contact');
+Route::post('/contact', 'ContactController@store');
 
 
 // Ici les routes pour le générateur de PDF
@@ -95,14 +61,32 @@ Route::get('/dynamic_pdf', 'Pdf\DynamicPDFController@index')->name('dynamic_pdf'
 Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf/pdf');
 
 
+
+// ROUTE POUR LES CRUDS
+// Ici la personne doit être connecter pour accèder aux pages
+
+
+
+// CRUD SERVICES
+    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    Route::get('{id}/edit', 'Admin\AdminController@edit')->name('admin.edit'); // Edition d'un article
+    Route::put('/admin/{id}/update', 'Admin\AdminController@update')->name('admin.update'); // Enregistrer la modification
+    Route::get('/admin/destroy/{id}', 'Admin\AdminController@destroy')->name('admin.destroy');
+    Route::get('create', 'Admin\AdminController@create')->name('admin.create'); // Formulaire de création
+    Route::post('store', 'Admin\AdminController@store')->name('admin.store'); // Sauvegarde de l'article
+
+// CRUD LIVRE D OR
+
+
+
+
+
+
+// FIN DES CRUDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+
+
+
+
+
+
 Route::resource('admin', 'Admin\AdminController');
-
-
-
-
-
-
-
-
-
-

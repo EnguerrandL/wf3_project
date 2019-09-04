@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categorie extends Model
 {
-    public function services()
+    public function push()
     {
-        return $this->hasMany('App\Modeles\Product');
+        return $this->hasMany('App\Modeles\Service');
         // return $this->hasMany(Product::class);
     }
 }

@@ -4,48 +4,67 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <div class="card">
-           
-            <table class="container  table table-hover table-bordered">
- 
-                <thead class="thead-dark">
-                <form class=" form-inline ">
-  <input class="mx-auto mb-2 mt-4 col-4 " type="text" placeholder="Recherche" aria-label="Search">
-  <button class="mx-auto mb-4 col-4 btn btn-outline-success btn-rounded btn-sm my-0" type="submit">Recherche</button>
-</form>
+
+
+
+
+                    <p> 1 = Hammam, 2 = UV, 3 = Soins, 4 = Mainpied, 5 = épilation, 6 = massage, 7 = CelluM6</p>
+
+                    <form class="form-inline container mx-auto">
+                        <input class="" type="text" placeholder="Recherche" aria-label="Search">
+                        <button class="btn btn-outline-success btn-rounded" type="submit">Recherche</button>
+                      </form>
+
+                      <a class="container mx-auto" href="/create"><button class=" mb-4 col-4 btn btn-primary btn-sm my-0" type="submit">Ajouter un service</button></a>
+
+                      {{ $services->links() }}
+
+
+                      <table class="table table-hover table-bordered">
+
+                            <thead class="thead-dark">
+
+
 
 
                     <tr>
-                        <td>Id Client</td>
-                        <td>Id panier </td>
-                        <td>Prénom</td>
-                        <td>Ville</td>
-                        <td>Montant restant</td>
-                        <td>Status</td>
-                        <td>Actions</td>
+                        <th>Nom</th>
+                        <th>Description </th>
+                        <th>Prix</th>
+                        <th>Categorie</th>
+                        <th>Actions</th>
                     </tr>
+
                 </thead>
-                @foreach ($clients as $client)
-                @foreach ($BonC as $boncadeau)
                 <tr>
-                    <td>{{$client->id}}</td>
-                    <td>{{$client->panier_id}}</td>
-                    <td>{{$client->prenom}}</td>
-                    <td>{{$client->ville}}</td>           
-                    <td>{{$boncadeau->affichage_prix}} Euros</td>
-                    <td>{{$boncadeau->status}}</td>
-                    <td><a href="/admin/{{$client->panier_id}}/edit"><button class="btn btn-primary">Mettre à jour les informations</button></a> <br> 
-                    <form class="my-1"action="{{ route('admin.destroy', $boncadeau->id)}}" method="POST">
-                    @csrf
-@method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Supprimer le client</button>
-                    </form></td>
-                    
+                     @foreach ($services as $service)
+
+                    <td>{{$service->nom}}</td>
+                    <td>{{$service->description}}</td>
+                    <td>{{$service->prix}}</td>
+                    <td>{{$service->categorie_id}}</td>
+
+                    <td><a href="/admin/{{$service->id}}/edit"><button class="btn btn-primary">update</button></a>
+
+
+                        <a href="{{ route('admin.destroy', $service->id) }}" onclick="event.preventDefault();document.getElementById('admin-form').submit();">
+                        <button class="btn btn-danger my-2">Supprimer</button>
+                     </a>
+
+
+
+                     <form id="admin-form" action="{{ '/admin/destroy/' .  $service->id }}"  style="display: none;">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit">ok</input>
+                        </form>
+
+                    </td>
+
                 </tr>
                 @endforeach
-                @endforeach
             </table>
-            </div>
+
         </div>
     </div>
 </div>

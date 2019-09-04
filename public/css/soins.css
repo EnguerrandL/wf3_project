@@ -1,0 +1,95 @@
+/* caroussel */
+
+.box-caroussel {
+    min-height: 25vh;
+}
+
+/* CSS DES CARTES ITEMS */
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+.btn {
+    text-transform: uppercase;
+}
+.btn.btn-lg {
+    padding: 6px 30px;
+}
+
+.imgpetitefleur {
+    width: 75px;
+    height: 64px;
+}
+
+/*  EMPLACEMENT DES LISTE +  IMAGE + BOUTON EMPLACEMENT   */
+.box-description {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.fleurcachee {
+    display: block;
+}
+.box-prestation {
+    background-color: rgba(255, 255, 255, 0.4);
+    min-height: 5.5rem;
+    border: solid 2px #f4bebc;
+    -webkit-box-shadow: 5px 5px 5px 2px rgba(138, 206, 237, 1);
+    box-shadow: 5px 5px 5px 2px rgba(138, 206, 237, 1);
+    border-radius: 5px 5px 5px 5px;
+}
+.box-tarif {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+    font-family: "Nature", Arial, Helvetica, sans-serif;
+}
+
+.police-caroussel {
+    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* ENCADREMENT TEXT DU CAROUSEL */
+.bg-colorcarousel {
+    background-color: rgba(194, 133, 133, 0.664);
+    color: #d57ca5;
+}
+
+@media screen and (max-width: 62em) {
+    .container {
+        padding: 40px 40px !important;
+    }
+    .police-caroussel {
+        font-family: "Snippet", Arial, Helvetica, sans-serif;
+        font-size: 1rem !important;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fleurcachee {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        padding: 20px 20px !important;
+    }
+}

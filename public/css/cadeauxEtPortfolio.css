@@ -1,0 +1,12 @@
+.imgcadeau {
+    background-image: url(../../img/boncadeau.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 20rem;
+}
+
+.visiteguidee {
+    width: 100%;
+    min-height: 35rem;
+  }
