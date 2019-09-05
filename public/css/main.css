@@ -1,5 +1,9 @@
+html {
+    font-size: 62.5%;
+}
 body {
     margin: 0;
+    font-size: 16px;
 }
 #spinner {
     position: fixed;
@@ -30,6 +34,11 @@ header nav {
     white-space: nowrap;
 }
 
+header nav > a {
+    display: inline-block;
+    max-width: 600px;
+}
+
 .nav-link {
     color: #477c90 !important;
 }
@@ -39,12 +48,9 @@ header nav {
 }
 
 button.navbar-toggler {
-    color: #b35d5d !important;
-    border-color: #b35d5d !important;
-}
-
-.dropdown-menu {
-    background-color: #82ccddf1 !important;
+    color: #c61e4c !important;
+    border-color: #c61e4c !important;
+    /* avant b35d5d */
 }
 
 header {
@@ -74,7 +80,7 @@ header {
 /* https://flatuicolors.com/palette/fr */
 
 .couleurrose {
-    color: #b35d5d !important;
+    color: #c61e4c !important;
 }
 .couleurbleu {
     color: #477c90;
@@ -97,44 +103,52 @@ header {
 }
 @font-face {
     font-family: "Nature";
-    src: url("../fonts/Nature-Beauty-Personal-Use.ttf") format("truetype");
+    /* src: url("../fonts/Nature-Beauty-Personal-Use.ttf") format("truetype"); */
+    src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
 }
 
 .policenature {
     font-family: "Nature", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
 }
 
 .policesnippet {
     font-family: "Snippet", Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #318188;
     font-weight: 600;
 }
 
 .policesnippet1 {
     font-family: "Snippet", Arial, Helvetica, sans-serif;
-    font-size: 1.3rem;
+    font-size: 2rem;
     color: #318188;
     font-weight: 600;
 }
 
 .policesnippet2 {
     font-family: "Snippet", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #318188;
     font-weight: 600;
 }
 
 footer h5 {
-    color: #b35d5d !important;
+    color: #c61e4c !important;
     font-family: "Times New Roman", Times, serif !important;
+    font-size: 2rem !important;
 }
 
 footer ul li a {
     color: #318188 !important;
     font-family: "Snippet", Arial, Helvetica, sans-serif !important;
-    font-size: 1rem !important;
+    font-size: 1.5rem !important;
     font-weight: 600 !important;
+}
+
+.btn {
+    font-size: 1.5rem !important;
 }
 
 .txtshadow2 {
@@ -144,14 +158,15 @@ footer ul li a {
 
 /* Style 2 - top/bottom lines come in from left/right */
 a.linkStyle2 {
-    padding: 0.5em 0;
+    padding: 0.2em 0;
     position: relative;
     -webkit-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
 }
 a.linkStyle2:hover,
 a.linkStyle2:focus {
-    color: #ff9999 !important;
+    color: #c61e4c !important;
+    /* avant ff9999 */
     text-decoration: none !important;
 }
 
@@ -163,6 +178,7 @@ a.linkStyle2::before {
     width: 100%;
     height: 1px;
     background: #e58e26;
+    /* avant e58e26 */
     display: block;
     -webkit-transform-origin: right top;
     transform-origin: right top;
@@ -202,6 +218,146 @@ a.linkStyle2::before {
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
 }
 a.linkStyle2::after {
     content: "";
@@ -211,6 +367,7 @@ a.linkStyle2::after {
     width: 100%;
     height: 1px;
     background: #d98b48;
+    /* avant d98b48 */
     display: block;
     -webkit-transform-origin: left top;
     transform-origin: left top;
@@ -220,6 +377,146 @@ a.linkStyle2::after {
     transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1), -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
@@ -297,42 +594,79 @@ a.linkStyle2:focus::after {
 /* slider publicitaire */
 
 .item_pub img {
-    max-width: 200px;
-    min-width: 160px;
+    max-width: 120px;
+    min-width: 100px;
     width: 25%;
     margin: 1rem;
 }
 
 /* médias queries */
 
+@media screen and (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .dropdown-item {
+        font-size: 3rem;
+    }
+    .dropdown-menu {
+        background-color: #a9d7e1 !important;
+    }
+    .policesnippet1 {
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 62em) {
     header nav {
-        font-size: 1.5rem;
+        font-size: 4rem;
     }
     .policesnippet {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     footer .container {
         padding: 40px 40px !important;
     }
+    .policenature {
+        font-size: 4rem;
+    }
+    .dropdown-item {
+        font-size: 3rem;
+    }
+    .dropdown-menu {
+        background-color: transparent !important;
+    }
+    .policesnippet1 {
+        font-size: 2rem;
+    }
 }
 @media only screen and (max-width: 500px) {
+    .dropdown-menu {
+        background-color: transparent !important;
+    }
     .policetest {
         font-size: 1rem;
+    }
+    .policenature {
+        font-size: 3rem;
+    }
+    .dropdown-item {
+        font-size: 2.5rem;
     }
     header {
         margin-bottom: 2rem;
     }
     header nav {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     footer .container {
         padding: 40px 40px !important;
     }
     .policesnippet {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .policesnippet1 {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Modeles\Product;
+use App\Modeles\Service;
 use App\Http\Controllers\Controller;
 use App\Modeles\Categorie;
 use Illuminate\Http\Request;
@@ -33,7 +33,7 @@ class CategorieController extends Controller
     public function epilation()
     {
 
-        $products = Product::where('categorie_id', "=", "5")->get();
+        $products = Service::where('categorie_id', "=", "5")->get();
 
         return view('epilation', [
             'products' => $products,
@@ -42,7 +42,7 @@ class CategorieController extends Controller
     public function hammam()
     {
 
-        $products = Product::where('categorie_id', "=", "1")->get();
+        $products = Service::where('categorie_id', "=", "1")->get();
 
         return view('hammam', [
             'products' => $products,
@@ -51,7 +51,7 @@ class CategorieController extends Controller
     public function lipomodelage()
     {
 
-        $products = Product::where('categorie_id', "=", "7")->get();
+        $products = Service::where('categorie_id', "=", "7")->get();
 
         return view('lipomodelage', [
             'products' => $products,
@@ -61,7 +61,7 @@ class CategorieController extends Controller
     public function massage()
     {
 
-        $products = Product::where('categorie_id', "=", "6")->get();
+        $products = Service::where('categorie_id', "=", "6")->get();
 
         return view('massage', [
             'products' => $products,
@@ -71,7 +71,7 @@ class CategorieController extends Controller
     public function ongles()
     {
 
-        $products = Product::where('categorie_id', "=", "4")->get();
+        $products = Service::where('categorie_id', "=", "4")->get();
 
         return view('ongles', [
             'products' => $products,
@@ -80,7 +80,7 @@ class CategorieController extends Controller
     public function soins()
     {
 
-        $products = Product::where('categorie_id', "=", "3")->get();
+        $products = Service::where('categorie_id', "=", "3")->get();
 
         return view('soins', [
             'products' => $products,
@@ -90,7 +90,7 @@ class CategorieController extends Controller
     public function uv()
     {
 
-        $products = Product::where('categorie_id', "=", "2")->get();
+        $products = Service::where('categorie_id', "=", "2")->get();
 
         return view('uv', [
             'products' => $products,

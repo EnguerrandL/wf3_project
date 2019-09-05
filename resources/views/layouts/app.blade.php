@@ -98,7 +98,7 @@ if (!isset($des)) {
                     </button>
 
                     <div class="collapse navbar-collapse policenature" id="navbarSupportedContent">
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav ml-auto">
                             <li class="nav-item active">
                                 <a class="nav-link linkStyle2" href="{{ route('home') }}"
                                     title="Accueil de Zen et Beauté">Accueil</a>
@@ -117,15 +117,13 @@ if (!isset($des)) {
                                     <a class="dropdown-item" href="{{ route('soins') }}"
                                         title="Nos soins du visage">Soins</a>
                                     <a class="dropdown-item" href="{{ route('lipomodelage') }}"
-                                        title="La cellu m6 de Zen et Beaut&eacute;">Cellu <strong><span
-                                                style="font-family: 'Livvic', sans-serif;">M6</span></strong></a>
+                                        title="La cellu m6 de Zen et Beaut&eacute;">Cellu M6</a>
                                     <a class="dropdown-item" href="{{ route('ongles') }}"
                                         title="Nos soins mains et pieds">Main\Pied</a>
                                     <a class="dropdown-item" href="{{ route('hammam') }}"
                                         title="Nos séance Hammam">Hammam</a>
                                     <a class="dropdown-item" href="{{ route('uv') }}"
-                                        title="Les UV de Zen et Beaut&eacute;">Séance
-                                        <strong><span style="font-family: 'Livvic', sans-serif;">UV</span></strong></a>
+                                        title="Les UV de Zen et Beaut&eacute;">Séance UV</a>
                                 </div>
                             </li>
                             <li class="nav-iteM">
@@ -138,8 +136,8 @@ if (!isset($des)) {
                                     href="{{ route('portfolio') }}" />Galerie</a>
                             </li>
                             <li class="nav-iteM">
-                                <a class="nav-link linkStyle2 policenature" href="{{ route('chequecadeau') }}"
-                                    title="Espace membre Zen et Beaut&eacute;">Carte cadeau</a>
+                                <a class="nav-link linkStyle2 policenature" href="{{ route('livredor.index') }}"
+                                    title="Espace membre Zen et Beaut&eacute;">Livre D'or</a>
                             </li>
                         </ul>
                     </div>
@@ -252,9 +250,6 @@ if (!isset($des)) {
                     <div class="text-center py-3 policesnippet2">© 2019 Design :
                         <a href="https://www.360-visio.fr" class="policesnippet2 linkStyle2"
                             title="Visitez le site de 360 Visio">360 Visio</a>
-
-
-
                     </div>
                 </footer>
             </div>

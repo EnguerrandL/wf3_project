@@ -32,14 +32,18 @@ Auth::routes();
 // Routes Page principal
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
-Route::get('/chequecadeau', 'CategorieController@chequecadeau')->name('chequecadeau');
 Route::get('/dev', 'HomeController@dev')->name('dev');
 Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentionslegales');
+
+
 
 
 // Ici les routes pour les différentes catégorie
 // nom épilation et slug = epilation
 // Exemple URL /categorie/epilation
+
+
+
 Route::get('/massage', 'CategorieController@massage')->name('massage');
 Route::get('/epilation', 'CategorieController@epilation')->name('epilation');
 Route::get('/hammam', 'CategorieController@hammam')->name('hammam');
@@ -75,10 +79,15 @@ Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pd
     Route::get('create', 'Admin\AdminController@create')->name('admin.create'); // Formulaire de création
     Route::post('store', 'Admin\AdminController@store')->name('admin.store'); // Sauvegarde de l'article
 
+
 // CRUD LIVRE D OR
 
 
-
+Route::get('/livredor', 'Admin\CommentController@index')->name('livredor.index');
+Route::get('/livredor/create', 'Admin\CommentController@create')->name('livredor.create');
+Route::post('/livredor/store', 'Admin\CommentController@store')->name('livredor.store');
+Route::put('/livredor/{id}/update', 'Admin\CommentController@update')->name('livredor.update');
+Route::get('/livredor/destroy/{id}', 'Admin\CommentController@destroy')->name('livredor.destroy');
 
 
 
