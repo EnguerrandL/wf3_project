@@ -11,6 +11,7 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
 </div>
 @endif
 
+
 <form class="col-6 mx-auto" action="{{ route('livredor.store') }}" method="POST">
     @csrf
 

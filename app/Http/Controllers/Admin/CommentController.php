@@ -92,7 +92,7 @@ class CommentController extends Controller
     {
         $service = Comment::find($id);
         $service->delete();
-        return redirect('/livredor');
+        return back()->with('danger', 'Le commentaire à bien été supprimer');
     }
 }
 
