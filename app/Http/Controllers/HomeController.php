@@ -78,8 +78,8 @@ class HomeController extends Controller
     // TESTS CONTROLLERS
 
 
-    public function stripe()
+    public function admin()
     {
-        return view('stripe');
+        return view('admin');
     }
 }

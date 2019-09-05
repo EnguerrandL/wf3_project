@@ -65,6 +65,8 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
     <!-- CSS pour les cartes animées -->
     <link rel="stylesheet" href="{{ asset('css/cards.css') }}" />
 
+    https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
+
 </head>
 
 <body>
@@ -398,6 +400,8 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
                 <div class="text-center py-3 policesnippet2">© 2019 Design :
                     <a href="https://www.360-visio.fr" class="policesnippet2 linkStyle2"
                         title="Visitez le site de 360 Visio">360 Visio</a>
+                        <a href="{{ route('gate') }}"><small>admin</small></a>
+                       
                 </div>
             </footer>
         </div>

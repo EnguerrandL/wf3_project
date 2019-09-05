@@ -14,11 +14,12 @@ class CommentController extends Controller
 
     public function index()
     {
+        $actives = 1;
+        $comments = Comment::orderBy('created_at', 'DESC')->paginate(10);
 
-        $comments = Comment::all();
-
-        return view('livredor.index',[
-            'comments' => $comments
+        return view('livredor.create',[
+            'comments' => $comments,
+            'actives' => $actives,
 
         ]);
     }
@@ -27,11 +28,12 @@ class CommentController extends Controller
     public function create()
     {
         $actives = 1;
-        $comments = Comment::all();
+        $comments = Comment::orderBy('created_at', 'DESC')->paginate(4);
+        
 
 
 
-        return view('livredor.create', [
+        return view('livredor.index', [
             'comments' => $comments,
             'actives' => $actives,
 
@@ -59,7 +61,7 @@ class CommentController extends Controller
         // Session::flash('status', 'Client mis à jour');
         // Session::flash('type', 'alert-success');
 
-        return back();
+        return back()->with('message', 'Votre message à bien été enregistrer, il est en attente de modération :)');
     }
 
 

@@ -89,7 +89,7 @@ class AdminController extends Controller
         // Session::flash('status', 'Client mis à jour');
         // Session::flash('type', 'alert-success');
 
-        return redirect('/admin')->with('message', 'Votre service à bien était envoyer');
+        return redirect('/admin')->with('message', 'Votre service à bien était mis à jour');
     }
 
 
@@ -101,7 +101,7 @@ class AdminController extends Controller
     {
         $service = Service::find($id);
         $service->delete();
-        return redirect('/admin');
+        return redirect('/admin')->with('autre', 'Le service vient d\'être supprimer ) ;');
     }
 
 

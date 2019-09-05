@@ -5,6 +5,8 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
 @extends('layouts.app')
 @section('content')
 
+<a href="{{ route('home') }}" class="col-2 mx-auto mt-2 btn btn-warning">Retourner sur le site</a>
+{{ $comments->links() }}
 <table class="col-6 mx-auto  table table-hover table-bordered">
     <thead class="thead-dark">
         <tr>
