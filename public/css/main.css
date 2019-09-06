@@ -5,6 +5,15 @@ body {
     margin: 0;
     font-size: 16px;
 }
+/* TRANSITION POUR LES INPUT DES FORMULAIRES */
+input {
+    transition: .5s all ease-in;
+
+}
+input:focus {
+    background-color: #13B7F5;
+}
+/* FIN */
 #spinner {
     position: fixed;
     z-index: 16;
@@ -94,6 +103,13 @@ header {
 .couleurverte {
     /* waterfall  */
     color: #318188 !important;
+}
+.btn-couleurbleu {
+    background-color: #13B7F5;
+}
+/* TAILLE POUR TABLEAU */
+.w-9 {
+    width: 9%;
 }
 
 /* police */

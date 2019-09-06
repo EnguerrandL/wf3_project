@@ -7,7 +7,6 @@ $des = "Selon la disponibilit&eacute; Zen et Beaut&eacute; s'engage &agrave; r&e
 <br><br>
 <!-- TITRE PAGE -->
 <h1 class="text-center policenature couleurrose">Nous Contacter</h1>
-<br>
 @if (session()->has('message'))
 <div class="col-6 mx-auto text-center alert alert-success" role="alert">
     {{ session()->get('message') }}
@@ -17,24 +16,29 @@ $des = "Selon la disponibilit&eacute; Zen et Beaut&eacute; s'engage &agrave; r&e
 
 <form class="text-center border col-lg-8 col-md-12 col-xs-12 border-light p-5 mx-auto" action="/contact" method="POST">
     @csrf
-    <!-- First name -->
-    <input type="text" name="nom" value="{{old('nom')}}" id="defaultRegisterFormFirstName"
-        class="form-control mb-4 col-12 mx-auto" placeholder="Nom">
 
-    <!-- Last name -->
-    <input type="text" name="prenom" value="{{old('prenom')}}" id="defaultRegisterFormLastName"
-        class="form-control mb-4 col-12 mx-auto" placeholder="Prénom">
+        <!-- Nom Prenom -->
+    <div class="row text-center">
+            <div class="col">
+                    <input type="text" name="nom" value="{{old('nom')}}" id="defaultRegisterFormFirstName"
+                    class="form-control mb-4 col-12 mx-auto policesnippet" placeholder="Nom">
+            </div>
+            <div class="col">
+                    <input type="text" name="prenom" value="{{old('prenom')}}" id="defaultRegisterFormLastName"
+                    class="form-control mb-4 col-12 mx-auto policesnippet" placeholder="Prénom">
+            </div>
+          </div>
 
     <!-- E-mail -->
     <input type="email" name="email" value="{{old('email')}}" id="defaultRegisterFormEmail"
-        class="form-control mb-4 col-12 mx-auto" placeholder="E-mail">
+        class="form-control mb-4 col-12 mx-auto policesnippet" placeholder="E-mail">
 
     <!-- SUJET -->
     <input type="text" name="sujet" value="{{old('sujet')}}" id="defaultRegisterFormLastName"
-        class="form-control mb-4 col-12 mx-auto" placeholder="Sujet">
+        class="form-control mb-4 col-12 mx-auto policesnippet" placeholder="Sujet">
 
     <!-- TEXT AREA -->
-    <textarea name="message" class="form-control  col-12 mx-auto" rows="5" id="comment"
+    <textarea name="message" class="form-control col-12 mx-auto policesnippet" rows="5" id="comment"
         placeholder="Texte @error('message') is-invalid @enderror">{{old('message')}}</textarea>
     @error('message')
     <div class="invalid-feedback">
@@ -45,7 +49,7 @@ $des = "Selon la disponibilit&eacute; Zen et Beaut&eacute; s'engage &agrave; r&e
     <br>
     <div class="g-recaptcha" data-sitekey="6LeklrUUAAAAAIuHqZD8igPmMfpL1nR7Folnll_o"></div>
     <!-- BOUTON SUBMIT -->
-    <div class="contenair mx-auto"><button class="btn btn-info btn-couleurbleu my-4 col-12 mx-auto" type="submit"
+    <div class="contenair mx-auto"><button class="btn btn-info btn-couleurbleu my-4 col-6 mx-auto" type="submit"
             name="envoyer">Envoyer</button></div>
 
     <hr>

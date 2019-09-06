@@ -44,6 +44,7 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
     <meta name="rating" content="general">
     <meta name="Author" content="<?php echo $signature; ?>">
     <link rel="canonical" title="<?php echo $tit; ?>" href="<?php echo $http; ?>">
+
     <style>
         @media print {}
 

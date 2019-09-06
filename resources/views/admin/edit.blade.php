@@ -7,7 +7,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
-                <div class="card">
+                <div class="card text-center policesnippet">
                     <div class="card-header"> Mise à jour des services</div>
                     <div class="card-body">
 
@@ -37,7 +37,7 @@
 
 
 
-                                <select class="col-md-12 mb-3" name="categorie_id">
+                                <select class="col-11 mx-auto" name="categorie_id">
                                     <option value="{{($service->categorie_id)}}">{{$service->categorie->nom}}</option>
                                         @foreach($pushs as $push)
                                         <option value="{{($push->id)}}">
@@ -65,17 +65,17 @@
                                 <div class="col-md-12 mb-3">
                                     <label for="title">Nom</label>
                                     <input value="@if(old('nom')) {{old('nom')}} @else {{ $service->nom }} @endif" placeholder="@if(old('nom')) {{old('nom')}} @else {{ $service->nom }} @endif"
-                                            name="nom" type="text" class="form-control">
+                                            name="nom" type="text" class="form-control mb-4 col-12 mx-auto policesnippet">
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="title">Description</label>
                                     <input value="@if(old('description')) {{old('description')}} @else {{ $service->description }} @endif" placeholder="@if(old('description')) {{old('description')}} @else {{ $service->description }} @endif"
-                                            name="description" type="text" class="form-control" >
+                                            name="description" type="text" class="form-control mb-4 col-12 mx-auto policesnippet" >
                                 </div>
                                 <div class="col-md-12 mb-3">
                                     <label for="title">Prix</label>
                                     <input value="@if(old('prix')) {{old('prix')}} @else {{ $service->prix }} @endif" placeholder="@if(old('prix')) {{old('prix')}} @else {{ $service->prix }} @endif"
-                                            name="prix" type="text" class="form-control">
+                                            name="prix" type="text" class="form-control mb-4 col-12 mx-auto policesnippet">
                                 </div>
 
 

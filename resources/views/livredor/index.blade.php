@@ -4,22 +4,16 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
 ?>
 @extends('layouts.app')
 @section('content')
-
-<a href="{{ route('home') }}" class="col-2 mx-auto mt-2 btn btn-warning">Retourner sur le site</a>
-{{ $comments->links() }}
-
-@if (session()->has('danger'))
-<div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
-    {{ session()->get('danger') }}
-</div>
-@endif
-<table class="col-6 mx-auto  table table-hover table-bordered">
+<br>
+<h1 class="text-center policesnippet">Modération Commentaires</h1>
+<br>
+<table class="col-6 mx-auto table table-hover table-bordered policesnippet text-center">
     <thead class="thead-dark">
         <tr>
-            <td>Nom/Pseudo</td>
-            <td>Commentaire</td>
-            <td>Date création</td>
-            <td>Modération</td>
+            <th>Nom/Pseudo</th>
+            <th>Commentaire</th>
+            <th>Date création</th>
+            <th>Modération</th>
 
         </tr>
     </thead>
@@ -28,14 +22,14 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
         <td>{{ $comment->pseudo}}</td>
         <td>{{ $comment->content}}</td>
         <td>{{ $comment->created_at->format('d/m/Y H:i:s') }}</td>
-        <td class="text-right">     <a class="mb-2 btn btn-success m-2 p-1 text-right" href="{{ route('livredor.update',  ['id'=>$comment->id]) }}">
-                Acepter le commentaire
+        <td class="text-right w-9">     <a class="btn btn-success" href="{{ route('livredor.update',  ['id'=>$comment->id]) }}">
+                <i class="fas fa-check-square"></i>
                </a>
 
 
 
                         <a href="{{ route('livredor.destroy', $comment->id) }}" onclick="event.preventDefault();document.getElementById('admin-form').submit();">
-                        <button class="btn btn-danger my-2">Supprimer</button>
+                        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
                      </a>
 
 
@@ -52,6 +46,16 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
         </tr>
     @endforeach
 </table>
+{{ $comments->links() }}
+<div class="container col-12 mx-auto">
+        <a href="{{ route('home') }}" class="col-2 mt-2 btn btn-warning">Retourner sur l'accueil</a>
+        @if (session()->has('danger'))
+        <div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
+            {{ session()->get('danger') }}
+        </div>
+        <br>
+</div>
 
+@endif
 
 @endsection

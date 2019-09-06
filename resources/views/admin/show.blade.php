@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-12">
+        <div class="col-md-12 text-center policesnippet">
 
-            <h2 class="container mx-auto">{{$categorie->nom}}</h2>
+            <h2 class="container mx-auto">Edition catégorie: {{$categorie->nom}}</h2>
 
 
                       {{-- {{ $services->links() }} --}}
@@ -18,11 +18,10 @@
 
 
 
-                    <tr>
+                    <tr class="text-center">
                         <th>Nom</th>
                         <th>Description </th>
                         <th>Prix</th>
-                        <th>Categorie</th>
                         <th>Actions</th>
                     </tr>
 
@@ -32,14 +31,12 @@
 
                     <td>{{$service->nom}}</td>
                     <td>{{$service->description}}</td>
-                    <td>{{$service->prix}}</td>
-                    <td>{{$service->categorie->nom}}</td>
-
-                    <td><a href="/admin/{{$service->id}}/edit"><button class="btn btn-primary">update</button></a>
+                    <td>{{$service->prix}}€</td>
+                    <td class="w-9 mx-auto"><a href="/admin/{{$service->id}}/edit"><button class="btn btn-primary"><i class="fas fa-edit"></i></button></a>
 
 
                         <a href="{{ route('admin.destroy', $service->id) }}" onclick="event.preventDefault();document.getElementById('admin-form').submit();">
-                        <button class="btn btn-danger my-2">Supprimer</button>
+                        <button class="btn btn-danger my-2"><i class="fas fa-trash-alt"></i></button>
                      </a>
 
 
@@ -55,7 +52,13 @@
                 </tr>
                 @endforeach
             </table>
-
+            <br>
+            <div class="col-md-6 mx-auto">
+                    <a class="btn btn-block btn-primary"
+                       href="{{ route('admin.index') }}">
+                        Retourner à la liste des services
+                    </a>
+                </div>
         </div>
     </div>
 </div>
