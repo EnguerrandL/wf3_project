@@ -28,8 +28,10 @@ class CommentController extends Controller
     public function create()
     {
         $actives = 1;
+
+
         $comments = Comment::orderBy('created_at', 'DESC')->paginate(4);
-        
+
 
 
 
@@ -39,6 +41,19 @@ class CommentController extends Controller
 
         ]);
     }
+
+public function activeComment($i) {
+    $comment = Comment::find($id);
+    $comment->active = true;
+    $comment->save();
+
+}
+public function deactiveComment($i) {
+    $comment = Comment::find($id);
+    $comment->active = false;
+    $comment->save();
+
+}
 
 
     public function store(CommentRequest $request)
@@ -72,7 +87,6 @@ class CommentController extends Controller
         $comment->pseudo = $data['pseudo'];
         $comment->content = $data['content'];
         $comment->active = $data['active'];
-
 
         // $service->update($data);
 

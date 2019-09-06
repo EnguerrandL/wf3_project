@@ -36,7 +36,7 @@ Route::get('/dev', 'HomeController@dev')->name('dev');
 Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentionslegales');
 
 
-// Accès pannel adminnistration 
+// Accès pannel adminnistration
 
 Route::get('/gate', 'HomeController@admin')->middleware('auth')->name('gate');
 
@@ -89,12 +89,15 @@ Route::middleware('auth')->group(function() {
 // CRUD LIVRE D OR
 
 Route::middleware('auth')->group(function() {
-Route::get('/livredor', 'Admin\CommentController@index')->name('livredor.index');
-Route::get('/livredor/create', 'Admin\CommentController@create')->name('livredor.create');
+
 Route::post('/livredor/store', 'Admin\CommentController@store')->name('livredor.store');
 Route::put('/livredor/{id}/update', 'Admin\CommentController@update')->name('livredor.update');
 Route::get('/livredor/destroy/{id}', 'Admin\CommentController@destroy')->name('livredor.destroy');
+Route::get('/livredor/create', 'Admin\CommentController@create')->name('livredor.create');
 });
+
+Route::get('/livredor', 'Admin\CommentController@index')->name('livredor.index');
+
 
 
 // FIN DES CRUDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
