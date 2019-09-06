@@ -202,9 +202,9 @@ canvas {
     letter-spacing: 0.1em;
     text-decoration: none;
     position: absolute;
-    bottom: 35px;
+    bottom: 25px;
     z-index: 2;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 #btnScroll span::before {
     position: absolute;
