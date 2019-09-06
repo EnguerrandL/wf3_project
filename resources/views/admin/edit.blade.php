@@ -38,13 +38,14 @@
 
 
                                 <select class="col-md-12 mb-3" name="categorie_id">
-                                    @foreach($pushs as $push)
-                                    <option value="{{($push->id)}}">
+                                    <option value="{{($service->categorie_id)}}">{{$service->categorie->nom}}</option>
+                                        @foreach($pushs as $push)
+                                        <option value="{{($push->id)}}">
 
 
-                                        {{$push->nom}}</option>
-                                    @endforeach
-                                    </select>
+                                            {{$push->nom}}</option>
+                                        @endforeach
+                                </select>
 
 
 

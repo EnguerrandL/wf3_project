@@ -5,17 +5,8 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
+            <h2 class="container mx-auto">{{$categorie->nom}}</h2>
 
-
-
-                    <p> 1 = Hammam, 2 = UV, 3 = Soins, 4 = Mainpied, 5 = épilation, 6 = massage, 7 = CelluM6</p>
-
-                    <form class="form-inline container mx-auto">
-                        <input class="" type="text" placeholder="Recherche" aria-label="Search">
-                        <button class="btn btn-outline-success btn-rounded" type="submit">Recherche</button>
-                      </form>
-
-                      <a class="container mx-auto" href="/create"><button class=" mb-4 col-4 btn btn-primary btn-sm my-0" type="submit">Ajouter un service</button></a>
 
                       {{-- {{ $services->links() }} --}}
 

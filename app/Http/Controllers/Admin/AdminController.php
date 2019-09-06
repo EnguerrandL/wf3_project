@@ -14,34 +14,53 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
+
     public function index() {
-        $services = Service::orderBy('created_at', 'DESC')->paginate(10);
-        $pushs = Categorie::with(['push'])->get();
-
+        $categories = Categorie::all();
 
         return view('admin.index', [
-            'services' =>$services,
-            'pushs' =>$pushs,
-
-
+            'categories' =>$categories,
         ]);
     }
 
-    public function show() {
-        $services = Service::orderBy('created_at', 'DESC')->paginate(10);
+    public function show($slug) {
+        $categorie = Categorie::where('slug', $slug)->first(); // Récupère la catégorie pour le slug fourni dans l'URL
+        // $services = Product::where('categorie_id', $categorie->id)->get();
+        $services = $categorie->services;
+        // dd($categorie);
 
-
-        return view('admin.index', [
-            'services' =>$services,
-
+        return view('admin.show', [
+            'categorie' =>$categorie,
+            'services' => $services,
         ]);
     }
+    // public function index() {
+    //     $services = Service::orderBy('created_at', 'DESC')->paginate(10);
+    //     $pushs = Categorie::with(['push'])->get();
 
+
+    //     return view('admin.index', [
+    //         'services' =>$services,
+    //         'pushs' =>$pushs,
+
+
+    //     ]);
+    // }
+
+    // public function show() {
+    //     $services = Service::orderBy('created_at', 'DESC')->paginate(10);
+
+
+    //     return view('admin.index', [
+    //         'services' =>$services,
+
+    //     ]);
+    // }
 
     public function create()
     {
         $service = Service::all();
-        $pushs = Categorie::with(['push'])->get();
+        $pushs = Categorie::with(['services'])->get();
 
 
         return view('admin.create', [
@@ -53,17 +72,43 @@ class AdminController extends Controller
     public function edit($id)
     {
         $service = Service::find($id);
-        $categories = Categorie::all();
-        $pushs = Categorie::with(['push'])->get();
+        $pushs = Categorie::with(['services'])->get();
 
 
 
         return view('admin.edit', [
             'service' => $service,
-            'categories' => $categories,
+            // 'categories' => $categories,
             'pushs' => $pushs,
         ]);
     }
+
+    // public function create()
+    // {
+    //     $service = Service::all();
+    //     $pushs = Categorie::with(['push'])->get();
+
+
+    //     return view('admin.create', [
+    //         'service' =>$service,
+    //         'pushs' =>$pushs,
+    //     ]);
+    // }
+
+    // public function edit($id)
+    // {
+    //     $service = Service::find($id);
+    //     $categories = Categorie::all();
+    //     $pushs = Categorie::with(['push'])->get();
+
+
+
+    //     return view('admin.edit', [
+    //         'service' => $service,
+    //         'categories' => $categories,
+    //         'pushs' => $pushs,
+    //     ]);
+    // }
 
 
 

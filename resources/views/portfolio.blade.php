@@ -17,112 +17,38 @@ $des = "Galerie photo de l'espace Zen et Beaut&eacute;.";
 <div class="container mt-2">
     <hr>
 
+    <?php
+    $images = [
+        ["./img/portfolio/bas4.jpg"], ["./img/portfolio/bas6.jpg"], ["./img/portfolio/bas7.jpg"], ["./img/portfolio/bas10.jpg"], ["./img/portfolio/boudha.jpg"], ["./img/portfolio/entree3.jpg"], ["./img/portfolio/escalier.jpg"], ["./img/portfolio/etage1.jpg"],
+        ["./img/portfolio/etage2.jpg"], ["./img/portfolio/etage3.jpg"], ["./img/portfolio/etage5.jpg"], ["./img/portfolio/hammam.jpg"], ["./img/portfolio/piece1.jpg"], ["./img/portfolio/piece2.jpg"], ["./img/portfolio/solarium.jpg"], ["./img/portfolio/vestiaire1.jpg"],
 
-    <!-- Modal -->
-    <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <img class="img-fluid img-thumbnail" src="./img/portfolio/bas4.jpg" alt="">
-                </div>
-                <div class="modal-footer mx-auto">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+];
+$index =0;
+
+    ?>
+
+    <div class="row text-center text-lg-left">
+        @foreach ($images as $image)
+        <!-- Modal -->
+        <div class="modal fade" id="modal<?php $index++;
+        echo $index;?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img class="img-fluid img-thumbnail" src="<?php echo $image[0]; ?>" alt="">
+                    </div>
+                    <div class="modal-footer mx-auto">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-
-
-
-
-    <div class="row text-center text-lg-left">
         <div class="col-lg-3 mx-auto col-md-12 ">
-            <a href="#" class="d-block mb-4 h-100" data-toggle="modal" data-target="#modal1">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/bas4.jpg" alt="">
+            <a href="#" class="d-block mb-4 h-100" data-toggle="modal" data-target="#modal<?php echo $index;?>">
+                <img class="img-fluid img-thumbnail" src="<?php echo $image[0]; ?>" alt="">
             </a>
         </div>
-        <div class="col-lg-3 mx-auto col-md-12 ">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/bas6.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12 ">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/bas7.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12 ">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/bas10.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/boudha.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/entree3.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/escalier.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/etage1.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/etage2.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/etage3.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/etage5.jpg" alt="">
-            </a>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/hammam.jpg" alt="">
-            </a>
-            <br>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/piece1.jpg" alt="">
-            </a>
-            <br>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/piece2.jpg" alt="">
-            </a>
-            <br>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/solarium.jpg" alt="">
-            </a>
-            <br>
-        </div>
-        <div class="col-lg-3 mx-auto col-md-12">
-            <a href="#" class="d-block mb-4 h-100">
-                <img class="img-fluid img-thumbnail" src="./img/portfolio/vestiaire1.jpg" alt="">
-            </a>
-            <br>
-        </div>
+        @endforeach
     </div>
 </div>
 <div class="text-center">

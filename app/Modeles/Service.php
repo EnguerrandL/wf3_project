@@ -7,9 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     protected $table = 'services';
-
-    public function push()
-     {
-         return $this->hasMany(Categorie::class);
+    public function categorie() {
+        return $this->belongsTo('App\Modeles\Categorie');
+        // return $this->hasMany(Product::class);
     }
 }

@@ -76,12 +76,15 @@ Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pd
 
 Route::middleware('auth')->group(function() {
 // CRUD SERVICES
-    Route::get('/admin', 'AdminController@index')->name('admin.index');
+    // Route::get('/admin', 'AdminController@index')->name('admin.index');
     Route::get('{id}/edit', 'Admin\AdminController@edit')->name('admin.edit'); // Edition d'un article
     Route::put('/admin/{id}/update', 'Admin\AdminController@update')->name('admin.update'); // Enregistrer la modification
     Route::get('/admin/destroy/{id}', 'Admin\AdminController@destroy')->name('admin.destroy');
     Route::get('create', 'Admin\AdminController@create')->name('admin.create'); // Formulaire de création
     Route::post('store', 'Admin\AdminController@store')->name('admin.store'); // Sauvegarde de l'article
+
+    Route::get('admin/categorie/{slug}', 'Admin\AdminController@show')->name('admin.show');
+    Route::get('admin/categories', 'Admin\AdminController@index')->name('admin.index');
 
 });
 

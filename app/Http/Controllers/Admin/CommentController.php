@@ -42,16 +42,26 @@ class CommentController extends Controller
         ]);
     }
 
-public function activeComment($i) {
+public function onComment($id) {
     $comment = Comment::find($id);
     $comment->active = true;
     $comment->save();
 
+    return view('livredor.create', [
+        'onComment' => $comment,
+    ]);
+
 }
-public function deactiveComment($i) {
+public function offComment($id) {
     $comment = Comment::find($id);
     $comment->active = false;
     $comment->save();
+
+    return view('livredor.create', [
+        'offComment' => $comment,
+
+
+    ]);
 
 }
 

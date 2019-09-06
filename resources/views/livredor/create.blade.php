@@ -29,7 +29,7 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
 
   {{ $comments->links() }}
 
-  @if ($actives === 1)
+  {{-- @if ($actives === 1) --}}
     @foreach($comments as $comment)
     <div class=" container col-3 card mt-2" style="display:block">
 
@@ -41,19 +41,35 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
             </div>
         </div>
     </div>
+    @endforeach
 
-    @endforeach
-  @else
-          @foreach($comments as $comment)
-          <div class=" container col-3 card mt-2" style="display:none">
-                <div class="row">
-                    <div class="card-body">
-                    <h5 class="card-title">{{ $comment->pseudo}}</h5>
-                      <p class="card-title">{{ $comment->content}}</p>
-                      <small>{{ $comment->created_at}}</small>
-        </div>
-      </div>
-    </div>
-    @endforeach
 
 @endsection
+
+{{--
+@if ($actives === 1)
+@foreach($comments as $comment)
+<div class=" container col-3 card mt-2" style="display:block">
+
+    <div class="row">
+        <div class="card-body">
+        <h5 class="card-title">{{ $comment->pseudo}}</h5>
+        <p class="card-title">{{ $comment->content}}</p>
+        <small>{{ $comment->created_at}}</small>
+        </div>
+    </div>
+</div>
+
+@endforeach
+@else
+      @foreach($comments as $comment)
+      <div class=" container col-3 card mt-2" style="display:none">
+            <div class="row">
+                <div class="card-body">
+                <h5 class="card-title">{{ $comment->pseudo}}</h5>
+                  <p class="card-title">{{ $comment->content}}</p>
+                  <small>{{ $comment->created_at}}</small>
+    </div>
+  </div>
+</div>
+@endforeach --}}

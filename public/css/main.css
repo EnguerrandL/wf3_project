@@ -106,6 +106,10 @@ header {
     /* src: url("../fonts/Nature-Beauty-Personal-Use.ttf") format("truetype"); */
     src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
 }
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+}
 
 .policenature {
     font-family: "Nature", Arial, Helvetica, sans-serif;
@@ -114,24 +118,24 @@ header {
 }
 
 .policesnippet {
-    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 2rem;
     color: #318188;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .policesnippet1 {
-    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 2rem;
     color: #318188;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .policesnippet2 {
-    font-family: "Snippet", Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     color: #318188;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 footer h5 {
@@ -142,9 +146,9 @@ footer h5 {
 
 footer ul li a {
     color: #318188 !important;
-    font-family: "Snippet", Arial, Helvetica, sans-serif !important;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif !important;
     font-size: 1.5rem !important;
-    font-weight: 600 !important;
+    font-weight: 400 !important;
 }
 
 .btn {
@@ -188,6 +192,18 @@ a.linkStyle2::before {
     transition: -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1), -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
@@ -547,6 +563,18 @@ a.linkStyle2::after {
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
     transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
         -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
+    transition: transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1),
+        -webkit-transform 0.4s cubic-bezier(0.1, 0.5, 1, 0.1);
 }
 a.linkStyle2:hover::before,
 a.linkStyle2:focus::before {
@@ -608,7 +636,8 @@ a.linkStyle2:focus::after {
         padding-right: 1rem !important;
     }
     .dropdown-item {
-        font-size: 3rem;
+        font-size: 2rem;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
     }
     .dropdown-menu {
         background-color: #a9d7e1 !important;
@@ -652,7 +681,8 @@ a.linkStyle2:focus::after {
         font-size: 3rem;
     }
     .dropdown-item {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
+        font-family: "Montserrat", Arial, Helvetica, sans-serif;
     }
     header {
         margin-bottom: 2rem;
