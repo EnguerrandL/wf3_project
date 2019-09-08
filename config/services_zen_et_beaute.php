@@ -21,25 +21,25 @@ return [
     // UV -------------------------------------------------------------------------------------
     [
         'nom' => 'UV',
-        'description' => "15 min",
+        'description' => "Temps 15 min",
         'prix' => '15',
         'categorie_id' => '2'
     ],
     [
         'nom' => 'UV',
-        'description' => "30 min",
+        'description' => "Temps 30 min",
         'prix' => '30',
         'categorie_id' => '2'
     ],
     [
         'nom' => 'UV',
-        'description' => "45 min",
+        'description' => "Temps 45 min",
         'prix' => '45',
         'categorie_id' => '2'
     ],
     [
         'nom' => 'UV',
-        'description' => "1h",
+        'description' => "Temps 1h",
         'prix' => '60',
         'categorie_id' => '2'
     ],
@@ -77,37 +77,37 @@ return [
     ],
     [
         'nom' => 'Soin Lifting Rafermissant à la vitamine C',
-        'description' => "temps : 1h15 à 1h30min, restructure et retend visiblement la peau. Celle-ci retrouve tonnicité virtalité et énergie",
+        'description' => "Temps : 1h15 à 1h30min, restructure et retend visiblement la peau. Celle-ci retrouve tonnicité virtalité et énergie",
         'prix' => '105',
         'categorie_id' => '3'
     ],
     [
         'nom' => 'Soin Beauté Lifting',
-        'description' => "temps : 1h15 à 1h30min, soin lissant et rafermissant au pro-collagène",
+        'description' => "Temps : 1h15 à 1h30min, soin lissant et rafermissant au pro-collagène",
         'prix' => '105',
         'categorie_id' => '3'
     ],
     [
         'nom' => 'Soin Age Repair',
-        'description' => "temps 1h15 à 1h30min, soin nettoyant et traitant contre les signes de l’âge",
+        'description' => "Temps 1h15 à 1h30min, soin nettoyant et traitant contre les signes de l’âge",
         'prix' => '135',
         'categorie_id' => '3'
     ],
     [
         'nom' => 'CatioLift',
-        'description' => "temps : 45min, soin effet liftant par « gymnastique fasciale – permet d’obtenir un « effet lifting ». Résultats spectaculaires dès le premier soin. L’ovale du visage se redessine, les traits sont lissés. La qualité de la peau s’améliore. Elle est plus ferme, plus élastique",
+        'description' => "Temps : 45min, soin effet liftant par « gymnastique fasciale – permet d’obtenir un « effet lifting ». Résultats spectaculaires dès le premier soin. L’ovale du visage se redessine, les traits sont lissés. La qualité de la peau s’améliore. Elle est plus ferme, plus élastique",
         'prix' => '95',
         'categorie_id' => '3'
     ],
     [
         'nom' => 'CatioVital',
-        'description' => "temps : 1h00 à 1h15min, methode de soin unique traitant en profondeur les effets de chaque type de peau avec un triple effet : effet sauna, effet ionisation, effet bien-être du massage aux huiles essentielles",
+        'description' => "Temps : 1h00 à 1h15min, methode de soin unique traitant en profondeur les effets de chaque type de peau avec un triple effet : effet sauna, effet ionisation, effet bien-être du massage aux huiles essentielles",
         'prix' => '85',
         'categorie_id' => '3'
     ],
     [
         'nom' => 'CatioVital double jeunesse',
-        'description' => "temps : 1h15 à 1h30min, tous les effets du catiovital doublé d’un véritable soin anti-âge",
+        'description' => "Temps : 1h15 à 1h30min, tous les effets du catiovital doublé d’un véritable soin anti-âge",
         'prix' => '105',
         'categorie_id' => '3'
     ],
@@ -323,7 +323,7 @@ return [
     // Massages -------------------------------------------------------------------------------
     [
         'nom' => 'Le voyages de rêve',
-        'description' => "emps : 1h15 à 1h30 (30mm hammam + exfoliations + 30mm modelage du monde)",
+        'description' => "Temps : 1h15 à 1h30 (30mm hammam + exfoliations + 30mm modelage du monde)",
         'prix' => '110',
         'categorie_id' => '6'
     ],

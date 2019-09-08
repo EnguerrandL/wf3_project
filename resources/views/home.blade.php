@@ -97,6 +97,11 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
     <!-- Classe bg-general pour inclure le background général en dehors du mur d'eau -->
     <div id="bg-general">
         <header>
+        @if (session()->has('dec'))
+<div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
+    {{ session()->get('dec') }}
+</div>
+@endif
             <!-- menu -->
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{{ route('home') }}"><img class="img-fluid" src="./img/zenetbeaute.png"
@@ -265,7 +270,7 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
                             </p>
                         </card>
                     </a>
-                    <a href="{{ route('livredor.index') }}" title="Ch&egrave;que cadeau &agrave; offrir ou s'offrir">
+                    {{-- <a href="{{ route('livredor.index') }}" title="Ch&egrave;que cadeau &agrave; offrir ou s'offrir">
                         <card class="bounceInUp animated" data-image="img/boncadeau.jpg">
                             <h3 class="titrecarte" slot="header">Carte Cadeaux</h3>
                             <span class="h4" slot="header">Cliquez</span>
@@ -273,7 +278,7 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
                                 Carte Cadeaux allant de 50€ à 500€
                             </p>
                         </card>
-                    </a>
+                    </a> --}}
                 </div>
                 <hr />
                 <!-- SLIDER POUR LES PUBS -->

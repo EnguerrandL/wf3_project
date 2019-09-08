@@ -1,7 +1,7 @@
 {{-- Page edition client --}}
 
 
-	@extends('layouts.app')
+@extends('layouts.app')
 
 @section('content')
     <div class="container">
@@ -39,11 +39,11 @@
 
                                 <select class="col-11 mx-auto" name="categorie_id">
                                     <option value="{{($service->categorie_id)}}">{{$service->categorie->nom}}</option>
-                                        @foreach($pushs as $push)
-                                        <option value="{{($push->id)}}">
+                                        @foreach($categories as $categorie)
+                                        <option value="{{($categorie->id)}}">
 
 
-                                            {{$push->nom}}</option>
+                                            {{$categorie->nom}}</option>
                                         @endforeach
                                 </select>
 

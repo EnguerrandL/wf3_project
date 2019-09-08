@@ -4,72 +4,75 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
 ?>
 @extends('layouts.app')
 @section('content')
-
-@if (session()->has('message'))
+<br>
+@if (session()->has('valide'))
 <div class="col-6 mx-auto text-center alert alert-success mt-5" role="alert">
-    {{ session()->get('message') }}
+    {{ session()->get('valide') }}
+</div>
+@endif
+@if (session()->has('supp'))
+<div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
+    {{ session()->get('supp') }}
 </div>
 @endif
 
+<br>
+<h1 class="text-center policesnippet">Modération Commentaires</h1>
+<br>
+<table class="col-6 mx-auto table table-hover table-bordered policesnippet text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nom/Pseudo</th>
+            <th>Commentaire</th>
+            <th>Date création</th>
+            <th>Modération</th>
 
-<form class="col-6 mx-auto" action="{{ route('livredor.store') }}" method="POST">
-    @csrf
-
-    <div class="form-group">
-            <div class="form-group">
-                    <label for="formGroupExampleInput">Nom / Pseudo</label>
-                    <input type="text" name="pseudo" class="form-control" id="formGroupExampleInput" placeholder="Nom ou Peusdo">
-                  </div>
-        <label for="exampleFormControlTextarea1">Votre avis</label>
-        <textarea class="form-control" name="content" id="exampleFormControlTextarea1" rows="5" placeholder="Votre avis compte pour nous"></textarea>
-      </div>
-
-    <button type="submit" class="btn btn-primary">Envoyer votre commentaire</button>
-  </form>
-
-  {{ $comments->links() }}
-
-  {{-- @if ($actives === 1) --}}
+        </tr>
+    </thead>
     @foreach($comments as $comment)
-    <div class=" container col-3 card mt-2" style="display:block">
+        <tr>
+        <td>{{ $comment->pseudo}}</td>
+        <td>{{ $comment->content}}</td>
+        <td>{{ $comment->created_at->format('d/m/Y H:i:s') }}</td>
+        <td class="text-right w-9">     
+        
+     <form action="{{ route('livredor.showComment', $comment->id) }}" method="POST">
+                            @method('PUT') <!-- Ajoute <input type=hidden value=PUT -->
+                            @csrf <!-- Ajoute <input type=hidden value=XXXXX -->
+       <button class="btn btn-success"><i class="fas fa-check-square"></i></button>
 
-        <div class="row">
-            <div class="card-body">
-            <h5 class="card-title">{{ $comment->pseudo}}</h5>
-            <p class="card-title">{{ $comment->content}}</p>
-            <small>{{ $comment->created_at}}</small>
-            </div>
-        </div>
-    </div>
+               </form> 
+
+
+
+                        <a href="{{ route('livredor.destroy', $comment->id) }}" onclick="event.preventDefault();document.getElementById('admin-form').submit();">
+                        <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                     </a>
+
+
+
+                     <form id="admin-form" action="{{ '/livredor/destroy/' .  $comment->id }}"  style="display: none;">
+                            @csrf
+                            @method('DELETE')
+                            <input type="submit">ok</input>
+                        </form>
+            </td>
+
+
+
+        </tr>
     @endforeach
+</table>
+{{ $comments->links() }}
+<div class="container col-12 mx-auto">
+        <a href="{{ route('home') }}" class="col-2 mt-2 btn btn-warning">Retourner sur l'accueil</a>
+        @if (session()->has('danger'))
+        <div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
+            {{ session()->get('danger') }}
+        </div>
+        <br>
+</div>
 
+@endif
 
 @endsection
-
-{{--
-@if ($actives === 1)
-@foreach($comments as $comment)
-<div class=" container col-3 card mt-2" style="display:block">
-
-    <div class="row">
-        <div class="card-body">
-        <h5 class="card-title">{{ $comment->pseudo}}</h5>
-        <p class="card-title">{{ $comment->content}}</p>
-        <small>{{ $comment->created_at}}</small>
-        </div>
-    </div>
-</div>
-
-@endforeach
-@else
-      @foreach($comments as $comment)
-      <div class=" container col-3 card mt-2" style="display:none">
-            <div class="row">
-                <div class="card-body">
-                <h5 class="card-title">{{ $comment->pseudo}}</h5>
-                  <p class="card-title">{{ $comment->content}}</p>
-                  <small>{{ $comment->created_at}}</small>
-    </div>
-  </div>
-</div>
-@endforeach --}}

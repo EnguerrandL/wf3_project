@@ -47,7 +47,7 @@ if (!isset($des)) {
     <meta name="rating" content="general">
     <meta name="Author" content="<?php echo $signature; ?>">
     <link rel="canonical" title="<?php echo $tit; ?>" href="<?php echo $http; ?>">
-    <script src="https://kit.fontawesome.com/c61b17da27.js"></script>
+    <script src="https://kit.fontawesome.com/0febd544a9.js"></script>
     <style>
         @media print {}
 

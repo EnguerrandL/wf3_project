@@ -8,12 +8,10 @@ class Client extends Model
 {
     protected $table = 'clients';
 
-    public function gift() 
+    public function gift()
     {
         return $this->hasMany('App\Modeles\Bon_cadeau');
     }
-
-    
 }
 
 

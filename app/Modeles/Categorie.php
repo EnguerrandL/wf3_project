@@ -9,6 +9,5 @@ class Categorie extends Model
     public function services()
     {
         return $this->hasMany('App\Modeles\Service');
-        // return $this->hasMany(Product::class);
     }
 }

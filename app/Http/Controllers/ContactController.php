@@ -6,7 +6,6 @@ use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-
 class ContactController extends Controller
 {
     public function create()
@@ -22,7 +21,6 @@ class ContactController extends Controller
             'email' => 'required|email',
             'sujet' => 'required',
             'message' => 'required',
-
         ]);
 
         Mail::to('contact@zenetbeaute.fr')->send(new ContactMail($data));

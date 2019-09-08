@@ -35,11 +35,11 @@
 
 
                                 <select class="col-md-12 mb-3" name="categorie_id">
-                                    @foreach($pushs as $push)
-                                    <option value="{{($push->id)}}">
+                                    @foreach($categories as $categorie)
+                                    <option value="{{($categorie->id)}}">
 
 
-                                        {{$push->nom}}</option>
+                                        {{$categorie->nom}}</option>
                                     @endforeach
                                     </select>
 

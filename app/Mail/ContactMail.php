@@ -11,15 +11,12 @@ class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     public $data;
-
 
     public function __construct(array $data)
     {
         $this->data = $data;
     }
-
 
     public function build()
     {

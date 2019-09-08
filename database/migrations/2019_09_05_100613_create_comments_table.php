@@ -18,8 +18,6 @@ class CreateCommentsTable extends Migration
             $table->string('pseudo');
             $table->string('content');
             $table->boolean('active')->default(0);
-
-
             $table->timestamps();
         });
     }

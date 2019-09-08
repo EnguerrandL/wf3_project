@@ -16,14 +16,13 @@ class CreateServicesTable extends Migration
             $table->integer('prix');
             $table->string('url_image')->nullable();
             $table->timestamps();
-        });
+    });
 
         // ajout de la clée étrangère catégories
         Schema::table('services', function (Blueprint $table) {
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories');
         });
-
     }
 
     /**
