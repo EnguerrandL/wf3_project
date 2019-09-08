@@ -5,15 +5,15 @@ $des = "Selon la disponibilit&eacute; Zen et Beaut&eacute; s'engage &agrave; r&e
 @extends('layouts.app')
 @section('content')
 
-<div class="col-6 mx-auto card text-center mt-5">
-    <div class="col-10 card-body mx-auto">
-        <h3 class="card-title mb-5">Panel d'administration</h3>
-        <a href="{{ url('/logout') }}" class="col-3 btn btn-danger mb-3">Se déconnecter</a>
+<div class="col-12 col-sm-12 mx-auto card text-center mt-5 border-primary  policesnippet">
+    <div class="col-12 card-body mx-auto">
+        <h3 class="card-title mb-2">Panel d'administration</h3>
+        <a href="{{ route('livredor.create') }}" class="btn btn-success col-8 mt-2">Validation Livre d'or</a>
+        <a href="{{ route('admin.index') }}" class="btn btn-primary col-8 mt-2">Gestion des services</a>
         <br>
-        <a href="{{ route('livredor.create') }}" class="col-3 btn btn-success mr-2">Validation Livre d'or</a>
-        <a href="{{ route('admin.index') }}" class="col-3 btn btn-primary">Gestion des services</a>
+        <a href="{{ route('home') }}" class="btn btn-warning col-8 mt-2">Retourner sur le site</a>
         <br>
-        <a href="{{ route('home') }}" class="col-3 btn btn-warning mt-3">Retourner sur le site</a>
+        <a href="{{ url('/logout') }}" class="col-3 btn btn-danger mt-2 col-8">Se déconnecter</a>
     </div>
 </div>
 

@@ -4,10 +4,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class=" col-xs-12">
         <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="card">
+            <div class="col-md-8">
+                <div class="card text-center policesnippet border-primary">
                     <div class="card-header">Créer un service</div>
                     <div class="card-body">
 
@@ -34,7 +34,7 @@
 
 
 
-                                <select class="col-md-12 mb-3" name="categorie_id">
+                                <select class="col-11 mx-auto mb-3 text-center" name="categorie_id">
                                     @foreach($categories as $categorie)
                                     <option value="{{($categorie->id)}}">
 
@@ -67,7 +67,8 @@
                                             <input type="submit" class="btn btn-block btn-primary"
                                                    value="Créer le service">
                                         </div>
-                                        <div class="col-md-6">
+
+                                        <div class="col-md-6 mt-2">
                                             <a class="btn btn-block btn-danger"
                                                href="{{ route('admin.index') }}">
                                                 Retourner à la liste des services

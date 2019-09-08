@@ -36,12 +36,14 @@ $des = "Nous nous chargeons d&#8217;envoyer votre bon cadeau.";
         <td>{{ $comment->created_at->format('d/m/Y H:i:s') }}</td>
         <td class="text-right w-9">     
         
-     <form action="{{ route('livredor.showComment', $comment->id) }}" method="POST">
+  
+        <form action="{{ route('livredor.showComment', $comment->id) }}" method="POST">
                             @method('PUT') <!-- Ajoute <input type=hidden value=PUT -->
                             @csrf <!-- Ajoute <input type=hidden value=XXXXX -->
        <button class="btn btn-success"><i class="fas fa-check-square"></i></button>
 
                </form> 
+
 
 
 

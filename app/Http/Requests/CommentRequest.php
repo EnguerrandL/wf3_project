@@ -16,6 +16,7 @@ class CommentRequest extends FormRequest
         return  [
             'pseudo' => 'required',
             'content' => 'required',
+            'g-recaptcha-response' => 'required|captcha',
         ];
     }
 }

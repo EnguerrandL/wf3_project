@@ -18,11 +18,11 @@ Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
 Route::get('/dev', 'HomeController@dev')->name('dev');
 Route::get('/mentionslegales', 'HomeController@mentionslegales')->name('mentionslegales');
 
-// Accès pannel adminnistration
+// AccÃ¨s pannel adminnistration
 Route::get('/gate', 'HomeController@admin')->middleware('auth')->name('gate');
 
-// Ici les routes pour les différentes catégorie
-// nom épilation et slug = epilation
+// Ici les routes pour les diffÃ©rentes catÃ©gorie
+// nom Ã©pilation et slug = epilation
 // Exemple URL /categorie/epilation
 Route::get('/massage', 'CategorieController@massage')->name('massage');
 Route::get('/epilation', 'CategorieController@epilation')->name('epilation');
@@ -37,18 +37,18 @@ Route::get('/uv', 'CategorieController@uv')->name('uv');
 Route::get('/contact', 'ContactController@create')->name('contact');
 Route::post('/contact', 'ContactController@store');
 
-// Ici les routes pour le générateur de PDF
+// Ici les routes pour le gÃ©nÃ©rateur de PDF
 Route::get('/dynamic_pdf', 'Pdf\DynamicPDFController@index')->name('dynamic_pdf');
 Route::get('/dynamic_pdf/pdf', 'Pdf\DynamicPDFController@pdf')->name('dynamic_pdf/pdf');
 
 // ROUTE POUR LES CRUDS
-// Ici la personne doit être connecter pour accèder aux pages
+// Ici la personne doit Ãªtre connecter pour accÃ¨der aux pages
 // CRUD SERVICES
 Route::middleware('auth')->group(function() {
     Route::get('{id}/edit', 'Admin\AdminController@edit')->name('admin.edit'); // Edition d'un article
     Route::put('/admin/{id}/update', 'Admin\AdminController@update')->name('admin.update'); // Enregistrer la modification
     Route::get('/admin/destroy/{id}', 'Admin\AdminController@destroy')->name('admin.destroy');
-    Route::get('create', 'Admin\AdminController@create')->name('admin.create'); // Formulaire de création
+    Route::get('create', 'Admin\AdminController@create')->name('admin.create'); // Formulaire de crÃ©ation
     Route::post('store', 'Admin\AdminController@store')->name('admin.store'); // Sauvegarde de l'article
     Route::get('admin/categorie/{slug}', 'Admin\AdminController@show')->name('admin.show');
     Route::get('admin/categories', 'Admin\AdminController@index')->name('admin.index');

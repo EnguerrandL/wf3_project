@@ -37,7 +37,7 @@
 
 
 
-                                <select class="col-11 mx-auto" name="categorie_id">
+                                <select class="col-11 mx-auto text-center" name="categorie_id">
                                     <option value="{{($service->categorie_id)}}">{{$service->categorie->nom}}</option>
                                         @foreach($categories as $categorie)
                                         <option value="{{($categorie->id)}}">

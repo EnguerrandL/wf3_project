@@ -97,11 +97,6 @@ $des = "Zen et beaut&eacute; sainte-maxime face &agrave; la mer &agrave;, 300 m2
     <!-- Classe bg-general pour inclure le background général en dehors du mur d'eau -->
     <div id="bg-general">
         <header>
-        @if (session()->has('dec'))
-<div class="col-6 mx-auto text-center alert alert-danger mt-5" role="alert">
-    {{ session()->get('dec') }}
-</div>
-@endif
             <!-- menu -->
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="{{ route('home') }}"><img class="img-fluid" src="./img/zenetbeaute.png"

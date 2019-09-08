@@ -55,7 +55,7 @@ class CommentController extends Controller
         $comment->updated_at=now();
         $comment->save();
 
-        return back()->with('message', 'Votre message à bien été enregistrer, il est en attente de modération :)');
+        return back()->with('message', 'Votre message a bien été enregistrer, il est en attente de validation :)');
     }
 
     public function update(Request $request, $id)
@@ -76,7 +76,7 @@ class CommentController extends Controller
     {
         $service = Comment::find($id);
         $service->delete();
-        return back()->with('supp', 'Le message à bien été supprimer');
+        return back()->with('supp', 'Le message a bien été supprimer');
     }
 }
 
